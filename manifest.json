@@ -1,0 +1,61 @@
+{
+    "name": "Clickette - Next Gen File Storage",
+    "short_name": "Clickette",
+    "start_url": "https://clickette.net",
+    "display": "standalone",
+    "description": "Packed with features and a great dashboard. What more could you want?",
+    "lang": "en",
+    "dir": "auto",
+    "theme_color": "#323ea8",
+    "background_color": "#0c101c",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "https://clickette.net/assets/img/clickette.png",
+            "sizes": "530x530",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "https://clickette.net/assets/img/pwa-portrait.png",
+            "sizes": "1280x1920",
+            "type": "image/png",
+            "description": "Clickette Dashboard"
+        }
+    ],
+    "prefer_related_applications": false,
+    "shortcuts": [
+        {
+            "name": "Dashboard",
+            "url": "https://dash.clickette.net",
+            "description": "View your Clickette dashboard"
+        },
+        {
+            "name": "Upload Files",
+            "url": "https://dash.clickette.net/dashboard/upload/file",
+            "description": "Upload files to your Clickette account"
+        },
+        {
+            "name": "Upload Text",
+            "url": "https://dash.clickette.net/dashboard/upload/text",
+            "description": "Upload text to your Clickette account"
+        },
+        {
+            "name": "Create Folder",
+            "url": "https://dash.clickette.net/dashboard/folders",
+            "description": "Create a new folder in your Clickette account"
+        },
+        {
+            "name": "Create URL",
+            "url": "https://dash.clickette.net/dashboard/urls",
+            "description": "Create a new short URL in your Clickette account"
+        },
+        {
+            "name": "View Files",
+            "url": "https://dash.clickette.net/dashboard/files?page=1",
+            "description": "View all files in your Clickette account"
+        }
+    ]
+}
