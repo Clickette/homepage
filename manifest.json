@@ -17,8 +17,8 @@
             "purpose": "any"
         },
         {
-            "src": "https://clickette.net/assets-homepage/img/maskable-icon.png",
-            "sizes": "815x815",
+            "src": "https://clickette.net/assets-homepage/img/maskable_icon_x512.png",
+            "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
         }
