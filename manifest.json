@@ -15,6 +15,12 @@
             "sizes": "530x530",
             "type": "image/png",
             "purpose": "any"
+        },
+        {
+            "src": "https://clickette.net/assets-homepage/img/maskable-icon.png",
+            "sizes": "815x815",
+            "type": "image/png",
+            "purpose": "maskable"
         }
     ],
     "screenshots": [
