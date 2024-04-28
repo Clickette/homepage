@@ -36,32 +36,86 @@
         {
             "name": "Dashboard",
             "url": "https://clickette.net/dashboard",
-            "description": "View your Clickette dashboard"
+            "description": "View your Clickette dashboard",
+            "icons": [
+                {
+                    "src": "https://clickette.net/assets-homepage/icons/home.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "Files",
+            "url": "https://clickette.net/dashboard/files?page=1",
+            "description": "View all files in your Clickette account",
+            "icons": [
+                {
+                    "src": "https://clickette.net/assets-homepage/icons/files.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "Folders",
+            "url": "https://clickette.net/dashboard/folders",
+            "description": "Create a new folder in your Clickette account",
+            "icons": [
+                {
+                    "src": "https://clickette.net/assets-homepage/icons/folders.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
         },
         {
             "name": "Upload Files",
             "url": "https://clickette.net/dashboard/upload/file",
-            "description": "Upload files to your Clickette account"
+            "description": "Upload files to your Clickette account",
+            "icons": [
+                {
+                    "src": "https://clickette.net/assets-homepage/icons/upload-files.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
         },
         {
             "name": "Upload Text",
             "url": "https://clickette.net/dashboard/upload/text",
-            "description": "Upload text to your Clickette account"
+            "description": "Upload text to your Clickette account",
+            "icons": [
+                {
+                    "src": "https://clickette.net/assets-homepage/icons/upload-text.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
         },
         {
-            "name": "Create Folder",
-            "url": "https://clickette.net/dashboard/folders",
-            "description": "Create a new folder in your Clickette account"
-        },
-        {
-            "name": "Create URL",
+            "name": "URLs",
             "url": "https://clickette.net/dashboard/urls",
-            "description": "Create a new short URL in your Clickette account"
+            "description": "Create a new short URL in your Clickette account",
+            "icons": [
+                {
+                    "src": "https://clickette.net/assets-homepage/icons/urls.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
         },
         {
-            "name": "View Files",
-            "url": "https://clickette.net/dashboard/files?page=1",
-            "description": "View all files in your Clickette account"
+            "name": "Stats",
+            "url": "https://clickette.net/dashboard/stats",
+            "description": "View global stats for all of Clickette",
+            "icons": [
+                {
+                    "src": "https://clickette.net/assets-homepage/icons/stats.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
         }
     ]
 }
