@@ -14,7 +14,7 @@
             "src": "https://clickette.net/assets/img/clickette.png",
             "sizes": "530x530",
             "type": "image/png",
-            "purpose": "maskable"
+            "purpose": "any"
         }
     ],
     "screenshots": [
