@@ -1,7 +1,7 @@
 {
     "name": "Clickette - Next Gen File Storage",
     "short_name": "Clickette",
-    "start_url": "https://clickette.net",
+    "start_url": "https://dash.clickette.net",
     "display": "standalone",
     "description": "Packed with features and a great dashboard. What more could you want?",
     "lang": "en",
