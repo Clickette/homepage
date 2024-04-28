@@ -6,7 +6,15 @@ export default {
         const newUrl = new URL(request.url);
         newUrl.host = isRoot ? 'homepage-internal.clickette.net' : 'dashboard-internal.clickette.net';
         newUrl.search = url.search; // Proxy query parameters
-        const newRequest = new Request(newUrl, request);
+
+        // Create a new request and modify the headers
+        const newRequest = new Request(newUrl, {
+            method: request.method,
+            headers: request.headers,
+            body: request.body,
+            redirect: request.redirect,
+        });
+
         const response = await fetch(newRequest);
 
         // Check if the content type is text/html
