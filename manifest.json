@@ -1,7 +1,7 @@
 {
     "name": "Clickette - Next Gen File Storage",
     "short_name": "Clickette",
-    "start_url": "https://clickette.net/pwa",
+    "start_url": "https://clickette.net/dashboard",
     "display": "standalone",
     "description": "Packed with features and a great dashboard. What more could you want?",
     "lang": "en",
@@ -11,7 +11,7 @@
     "orientation": "any",
     "icons": [
         {
-            "src": "https://clickette.net/assets/img/clickette.png",
+            "src": "https://clickette.net/assets-homepage/img/clickette.png",
             "sizes": "530x530",
             "type": "image/png",
             "purpose": "any"
@@ -19,7 +19,7 @@
     ],
     "screenshots": [
         {
-            "src": "https://clickette.net/assets/img/pwa-portrait.png",
+            "src": "https://clickette.net/assets-homepage/img/pwa-portrait.png",
             "sizes": "1280x1920",
             "type": "image/png",
             "description": "Clickette Dashboard"
@@ -29,32 +29,32 @@
     "shortcuts": [
         {
             "name": "Dashboard",
-            "url": "https://dash.clickette.net",
+            "url": "https://clickette.net/dashboard",
             "description": "View your Clickette dashboard"
         },
         {
             "name": "Upload Files",
-            "url": "https://dash.clickette.net/dashboard/upload/file",
+            "url": "https://clickette.net/dashboard/upload/file",
             "description": "Upload files to your Clickette account"
         },
         {
             "name": "Upload Text",
-            "url": "https://dash.clickette.net/dashboard/upload/text",
+            "url": "https://clickette.net/dashboard/upload/text",
             "description": "Upload text to your Clickette account"
         },
         {
             "name": "Create Folder",
-            "url": "https://dash.clickette.net/dashboard/folders",
+            "url": "https://clickette.net/dashboard/folders",
             "description": "Create a new folder in your Clickette account"
         },
         {
             "name": "Create URL",
-            "url": "https://dash.clickette.net/dashboard/urls",
+            "url": "https://clickette.net/dashboard/urls",
             "description": "Create a new short URL in your Clickette account"
         },
         {
             "name": "View Files",
-            "url": "https://dash.clickette.net/dashboard/files?page=1",
+            "url": "https://clickette.net/dashboard/files?page=1",
             "description": "View all files in your Clickette account"
         }
     ]
