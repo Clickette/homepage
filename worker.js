@@ -2,7 +2,7 @@ export default {
     async fetch(request, env, ctx) {
         const url = new URL(request.url);
         const path = url.pathname;
-        const isRoot = path === '/' || path === '/terms' || path === '/privacy' || path === '/privacy-policy' || path.startsWith('/assets-homepage') || path === '/manifest.json'
+        const isRoot = path === '/' || path.startsWith('/terms') || path.startsWith('/privacy') || path.startsWith('/privacy-policy') || path.startsWith('/assets-homepage') || path.startsWith('/manifest.json')
         const newUrl = new URL(request.url);
         newUrl.host = isRoot ? 'homepage-internal.clickette.net' : 'dashboard-internal.clickette.net';
         newUrl.search = url.search; // Proxy query parameters
@@ -30,14 +30,30 @@ export default {
                 'clickette.net'
             )
             const modifiedText3 = modifiedText2.replaceAll(
-                'dashboard-internal.clickette.net',
-                'clickette.net'
+                'dashboard-internal.',
+                ''
             )
             const modifiedText4 = modifiedText3.replaceAll(
-                'homepage-internal.clickette.net',
-                'clickette.net'
+                'homepage-internal.',
+                ''
             )
             return new Response(modifiedText4, {
+                status: response.status,
+                statusText: response.statusText,
+                headers: response.headers
+            });
+        }
+        if (!isRoot && contentType && contentType.includes("application/json")) {
+            const text = await response.text();
+            const modifiedText = text.replaceAll(
+                'dashboard-internal.',
+                ''
+            )
+            const modifiedText2 = modifiedText.replaceAll(
+                'homepage-internal.',
+                ''
+            )
+            return new Response(modifiedText2, {
                 status: response.status,
                 statusText: response.statusText,
                 headers: response.headers
