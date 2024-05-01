@@ -1,10 +1,18 @@
 export default {
-    async fetch(request, env, ctx) {
+    async fetch(request, _env, _ctx) {
         const url = new URL(request.url);
         const path = url.pathname;
-        const isRoot = path === '/' || path.startsWith('/terms') || path.startsWith('/privacy') || path.startsWith('/privacy-policy') || path.startsWith('/assets-homepage') || path.startsWith('/manifest.json')
+        const isRoot =
+            path === "/" ||
+            path.startsWith("/terms") ||
+            path.startsWith("/privacy") ||
+            path.startsWith("/privacy-policy") ||
+            path.startsWith("/assets-homepage") ||
+            path.startsWith("/manifest.json");
         const newUrl = new URL(request.url);
-        newUrl.host = isRoot ? 'homepage-internal.clickette.net' : 'dashboard-internal.clickette.net';
+        newUrl.host = isRoot
+            ? "homepage-internal.clickette.net"
+            : "dashboard-internal.clickette.net";
         newUrl.search = url.search; // Proxy query parameters
 
         // Create a new request and modify the headers
@@ -15,6 +23,9 @@ export default {
             redirect: request.redirect,
         });
 
+        // Add the Override-Domain header
+        newRequest.headers.set("Override-Domain", "clickette.net");
+
         const response = await fetch(newRequest);
 
         // Check if the content type is text/html
@@ -22,27 +33,29 @@ export default {
         if (!isRoot && contentType && contentType.includes("text/html")) {
             const text = await response.text();
             const modifiedText = text.replace(
-                '</head>',
+                "</head>",
                 '<link rel="manifest" href="/manifest.json" /><link rel="icon" type="image/png" sizes="1024x1024" href="/assets-homepage/img/clickette.png" /></head>'
-            )
+            );
             const modifiedText2 = modifiedText.replaceAll(
-                'dash.clickette.net',
-                'clickette.net'
-            )
+                "dash.clickette.net",
+                "clickette.net"
+            );
             const modifiedText3 = modifiedText2.replaceAll(
-                'dashboard-internal.',
-                ''
-            )
+                "dashboard-internal.",
+                ""
+            );
             const modifiedText4 = modifiedText3.replaceAll(
-                'homepage-internal.',
-                ''
-            )
+                "homepage-internal.",
+                ""
+            );
             return new Response(modifiedText4, {
                 status: response.status,
                 statusText: response.statusText,
-                headers: response.headers
+                headers: response.headers,
             });
         }
+        // j a n k
+        /*
         if (!isRoot && contentType && contentType.includes("application/json")) {
             const text = await response.text();
             const modifiedText = text.replaceAll(
@@ -59,6 +72,7 @@ export default {
                 headers: response.headers
             });
         }
+        */
 
         return response;
     },
