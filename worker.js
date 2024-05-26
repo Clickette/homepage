@@ -33,6 +33,10 @@ export default {
         if (!isRoot && contentType && contentType.includes("text/html")) {
             const text = await response.text();
             const modifiedText = text.replace(
+<<<<<<< HEAD
+                '</head>',
+                '<link rel="manifest" href="/manifest.json" /><link rel="icon" type="image/png" sizes="1024x1024" href="/assets-homepage/img/clickette.svg" /></head>'
+=======
                 "</head>",
                 '<link rel="manifest" href="/manifest.json" /><link rel="icon" type="image/png" sizes="1024x1024" href="/assets-homepage/img/clickette.png" /></head>'
             );
@@ -61,6 +65,7 @@ export default {
             const modifiedText = text.replaceAll(
                 'dashboard-internal.',
                 ''
+>>>>>>> b3b60e353a947d2d8ceaeca664a556e8997ed117
             )
             const modifiedText2 = modifiedText.replaceAll(
                 'homepage-internal.',
