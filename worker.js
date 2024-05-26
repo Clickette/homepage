@@ -48,11 +48,37 @@ export default {
                 "homepage-internal.",
                 ""
             );
+            const logoJs = `// Function to change the innerHTML of the target element
+            function changeInnerHTML() {
+                const targetElement = document.querySelector("#__next > div > header > div > h1");
+                if (targetElement) {
+                    targetElement.innerHTML = '<img src="https://clickette.net/assets-homepage/img/wordmark-white.svg" height="30" style="margin-top:-8px;">';
+                    observer.disconnect();  // Stop observing once the target element is found and updated
+                }
+            }
+            
+            // Create a MutationObserver instance and pass a callback function to be executed when mutations are observed
+            const observer = new MutationObserver((mutationsList, observer) => {
+                for (const mutation of mutationsList) {
+                    if (mutation.type === 'childList') {
+                        changeInnerHTML();
+                    }
+                }
+            });
+            
+            // Configuration object for the observer (observe child nodes)
+            const config = { childList: true, subtree: true };
+            
+            // Start observing the entire document
+            observer.observe(document, config);
+            
+            // Call the function initially in case the element is already present when the script runs
+            changeInnerHTML();`;            
             // new logo <img src="https://clickette.net/assets-homepage/img/wordmark-white.svg" height="30" style="margin-top:-8px;">
             // old logo <h1 class="zipline-Text-root zipline-Title-root zipline-k7tutq">Clickette</h1>
             const modifiedText5 = modifiedText4.replace(
-                '<h1 class="zipline-Text-root zipline-Title-root zipline-k7tutq">Clickette</h1>',
-                '<h1 class="zipline-Text-root zipline-Title-root zipline-k7tutq"><img src="https://clickette.net/assets-homepage/img/wordmark-white.svg" height="30" style="margin-top:-8px;"></h1>'
+                '</body>',
+                '</body><script>' + logoJs + '</script>'
             );
             return new Response(modifiedText5, {
                 status: response.status,
