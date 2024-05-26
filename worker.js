@@ -34,7 +34,7 @@ export default {
             const text = await response.text();
             const modifiedText = text.replace(
                 "</head>",
-                '<link rel="manifest" href="/manifest.json" /><link rel="icon" type="image/x-icon" sizes="1024x1024" href="/assets-homepage/img/favicon.ico" /></head>'
+                '<link rel="manifest" href="/manifest.json" /><link rel="icon" type="image/x-icon" sizes="256x256" href="https://clickette.net/assets-homepage/img/favicon.ico" /></head>'
             );
             const modifiedText2 = modifiedText.replaceAll(
                 "dash.clickette.net",
