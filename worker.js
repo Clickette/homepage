@@ -33,12 +33,8 @@ export default {
         if (!isRoot && contentType && contentType.includes("text/html")) {
             const text = await response.text();
             const modifiedText = text.replace(
-<<<<<<< HEAD
-                '</head>',
-                '<link rel="manifest" href="/manifest.json" /><link rel="icon" type="image/png" sizes="1024x1024" href="/assets-homepage/img/clickette.svg" /></head>'
-=======
                 "</head>",
-                '<link rel="manifest" href="/manifest.json" /><link rel="icon" type="image/png" sizes="1024x1024" href="/assets-homepage/img/clickette.png" /></head>'
+                '<link rel="manifest" href="/manifest.json" /><link rel="icon" type="image/x-icon" sizes="1024x1024" href="/assets-homepage/img/favicon.ico" /></head>'
             );
             const modifiedText2 = modifiedText.replaceAll(
                 "dash.clickette.net",
@@ -52,7 +48,13 @@ export default {
                 "homepage-internal.",
                 ""
             );
-            return new Response(modifiedText4, {
+            // new logo <img src="https://clickette.net/assets-homepage/img/wordmark-white.svg" height="30" style="margin-top:-8px;">
+            // old logo <h1 class="zipline-Text-root zipline-Title-root zipline-k7tutq">Clickette</h1>
+            const modifiedText5 = modifiedText4.replace(
+                '<h1 class="zipline-Text-root zipline-Title-root zipline-k7tutq">Clickette</h1>',
+                '<h1 class="zipline-Text-root zipline-Title-root zipline-k7tutq"><img src="https://clickette.net/assets-homepage/img/wordmark-white.svg" height="30" style="margin-top:-8px;"></h1>'
+            );
+            return new Response(modifiedText5, {
                 status: response.status,
                 statusText: response.statusText,
                 headers: response.headers,
@@ -65,7 +67,6 @@ export default {
             const modifiedText = text.replaceAll(
                 'dashboard-internal.',
                 ''
->>>>>>> b3b60e353a947d2d8ceaeca664a556e8997ed117
             )
             const modifiedText2 = modifiedText.replaceAll(
                 'homepage-internal.',
