@@ -27,7 +27,6 @@
         />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Clickette" />
-        <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://clickette.instatus.com/en/2c5eddda/widget/script.js"></script>
         <script type="application/ld+json">
             {
@@ -109,20 +108,80 @@
                 </div>
             </div>
         </nav>
-
-        <div class="sticky justify-center w-full mx-auto">
-            <div class="flex items-center justify-center h-12 text-white bg-transparent">
-              <div class="flex items-center justify-center gap-4">
-                <div class="text-xs font-medium">
-                  <span>Clickette has experienced a data loss</span>
+        
+        <style>
+            .sticky-container {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin: 0 auto;
+            }
+    
+            .content-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 3rem; /* 12 * 0.25rem */
+                background-color: transparent;
+                color: white;
+            }
+    
+            .text-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem; /* 4 * 0.25rem */
+            }
+    
+            .text-container span {
+                font-size: 0.75rem; /* 12px */
+                font-weight: 500;
+            }
+    
+            .divider {
+                display: none;
+                width: 1px;
+                height: 1.5rem; /* 6 * 0.25rem */
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+    
+            @media (min-width: 640px) {
+                .divider {
+                    display: block;
+                }
+            }
+    
+            .link-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.5rem 1rem; /* 2 * 0.25rem, 4 * 0.25rem */
+                font-size: 0.75rem; /* 12px */
+                font-weight: 600;
+                border-radius: 0.5rem; /* 8px */
+                height: 2rem; /* 8 * 0.25rem */
+                color: white;
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.15));
+                transition: all 0.3s;
+                border: 1px inset rgba(255, 255, 255, 0.2);
+            }
+    
+            .link-button:hover {
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.25));
+            }
+        </style>
+    </head>
+        <div class="sticky-container">
+            <div class="content-container">
+                <div class="text-container">
+                    <span>Clickette has experienced a data loss ・</span>
                 </div>
-                <div class="hidden w-px h-6 sm:block bg-white/20"></div>
+                <div class="divider"></div>
                 <div>
-                  <a class="text-xs flex font-semibold items-center justify-center px-4 py-2 rounded-lg transition-all h-8 text-white bg-gradient-to-b from-white/[.105] hover:to-white/[.25] ring-1 ring-inset ring-white/20 to-white/[.15]" href="https://clickette.instatus.com/clwuo44u694475bfooyvtw1k5s">Learn more &nbsp; 🡪</a>
+                    <a class="link-button" href="https://clickette.instatus.com/clwuo44u694475bfooyvtw1k5s">Learn more &nbsp; 🡪</a>
                 </div>
-              </div>
             </div>
-          </div>
+        </div>
 
         <header class="bg-dark">
             <div class="container py-5">
