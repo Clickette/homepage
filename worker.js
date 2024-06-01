@@ -4,6 +4,7 @@ export default {
         const path = url.pathname;
         const isRoot =
             path === "/" ||
+            path.startsWith("/index.html") ||
             path.startsWith("/terms") ||
             path.startsWith("/privacy") ||
             path.startsWith("/privacy-policy") ||
@@ -48,32 +49,46 @@ export default {
                 "homepage-internal.",
                 ""
             );
-            const logoJs = `// Function to change the innerHTML of the target element
-            function changeInnerHTML() {
+            const logoJs = `// Function to set the desired innerHTML
+            function setTargetInnerHTML() {
                 const targetElement = document.querySelector("#__next > div > header > div > h1");
-                if (targetElement) {
+                if (targetElement && targetElement.innerHTML.trim() === 'Clickette') {
                     targetElement.innerHTML = '<img src="https://clickette.net/assets-homepage/img/wordmark-white.svg" height="30" style="margin-top:-8px;">';
-                    observer.disconnect();  // Stop observing once the target element is found and updated
+                    return targetElement; // Return the target element
                 }
+                return null;
             }
             
-            // Create a MutationObserver instance and pass a callback function to be executed when mutations are observed
+            // Create a MutationObserver instance to monitor changes to the target element's innerHTML
             const observer = new MutationObserver((mutationsList, observer) => {
+                const targetElement = document.querySelector("#__next > div > header > div > h1");
+                if (targetElement && targetElement.innerHTML.trim() === 'Clickette') {
+                    setTargetInnerHTML();
+                }
+            });
+            
+            // Initial check to set the innerHTML if the target element is already present
+            let targetElement = setTargetInnerHTML();
+            
+            // Start observing the document for changes to detect when the target element is added
+            const config = { childList: true, subtree: true };
+            observer.observe(document, config);
+            
+            // Additional observer to detect when the target element is added to the DOM
+            const targetObserver = new MutationObserver((mutationsList, observer) => {
                 for (const mutation of mutationsList) {
                     if (mutation.type === 'childList') {
-                        changeInnerHTML();
+                        targetElement = setTargetInnerHTML();
+                        if (targetElement) {
+                            observer.observe(targetElement, { childList: true, subtree: true });
+                        }
                     }
                 }
             });
             
-            // Configuration object for the observer (observe child nodes)
-            const config = { childList: true, subtree: true };
-            
-            // Start observing the entire document
-            observer.observe(document, config);
-            
-            // Call the function initially in case the element is already present when the script runs
-            changeInnerHTML();`;            
+            // Start observing the entire document to detect when the target element is added
+            targetObserver.observe(document, { childList: true, subtree: true });
+            `;            
             // new logo <img src="https://clickette.net/assets-homepage/img/wordmark-white.svg" height="30" style="margin-top:-8px;">
             // old logo <h1 class="zipline-Text-root zipline-Title-root zipline-k7tutq">Clickette</h1>
             const modifiedText5 = modifiedText4.replace(
@@ -105,7 +120,6 @@ export default {
             });
         }
         */
-
         return response;
     },
 };
