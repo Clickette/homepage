@@ -1,7 +1,30 @@
+const RATE_LIMIT_TIME = 60 * 1000; // 1 minute in milliseconds
+const KV_NAMESPACE = "REGISTRATION_LIMIT";
+
 export default {
-    async fetch(request, _env, _ctx) {
+    async fetch(request, env, ctx) {
         const url = new URL(request.url);
         const path = url.pathname;
+
+        if (path === '/auth/register') {
+            const clientIP = request.headers.get('cf-connecting-ip');
+            const currentTimestamp = Date.now();
+            const key = `register:${clientIP}`;
+
+            // Fetch the last registration timestamp from KV
+            const lastTimestamp = await env[KV_NAMESPACE].get(key);
+
+            if (lastTimestamp) {
+                const elapsedTime = currentTimestamp - parseInt(lastTimestamp);
+                if (elapsedTime < RATE_LIMIT_TIME) {
+                    return new Response('Too many requests, please try again later.', { status: 429 });
+                }
+            }
+
+            // Store the new registration timestamp in KV
+            await env[KV_NAMESPACE].put(key, currentTimestamp.toString());
+        }
+
         const isRoot =
             path === "/" ||
             path.startsWith("/index.html") ||
@@ -31,7 +54,7 @@ export default {
 
         // Check if the content type is text/html
         const contentType = response.headers.get("content-type");
-        if (!isRoot && contentType && contentType.includes("text/html")) {
+        if (isRoot && contentType && contentType.includes("text/html")) {
             const text = await response.text();
             const modifiedText = text.replace(
                 "</head>",
@@ -49,51 +72,38 @@ export default {
                 "homepage-internal.",
                 ""
             );
-            const logoJs = `// Function to set the desired innerHTML
-            function setTargetInnerHTML() {
-                const targetElement = document.querySelector("#__next > div > header > div > h1");
-                if (targetElement && targetElement.innerHTML.trim() === 'Clickette') {
-                    targetElement.innerHTML = '<img src="https://clickette.net/assets-homepage/img/wordmark-white.svg" height="30" style="margin-top:-8px;">';
-                    return targetElement; // Return the target element
-                }
-                return null;
-            }
-            
-            // Create a MutationObserver instance to monitor changes to the target element's innerHTML
-            const observer = new MutationObserver((mutationsList, observer) => {
-                const targetElement = document.querySelector("#__next > div > header > div > h1");
-                if (targetElement && targetElement.innerHTML.trim() === 'Clickette') {
-                    setTargetInnerHTML();
-                }
-            });
-            
-            // Initial check to set the innerHTML if the target element is already present
-            let targetElement = setTargetInnerHTML();
-            
-            // Start observing the document for changes to detect when the target element is added
-            const config = { childList: true, subtree: true };
-            observer.observe(document, config);
-            
-            // Additional observer to detect when the target element is added to the DOM
-            const targetObserver = new MutationObserver((mutationsList, observer) => {
-                for (const mutation of mutationsList) {
-                    if (mutation.type === 'childList') {
-                        targetElement = setTargetInnerHTML();
-                        if (targetElement) {
-                            observer.observe(targetElement, { childList: true, subtree: true });
-                        }
-                    }
-                }
-            });
-            
-            // Start observing the entire document to detect when the target element is added
-            targetObserver.observe(document, { childList: true, subtree: true });
-            `;            
-            // new logo <img src="https://clickette.net/assets-homepage/img/wordmark-white.svg" height="30" style="margin-top:-8px;">
-            // old logo <h1 class="zipline-Text-root zipline-Title-root zipline-k7tutq">Clickette</h1>
+            const logoJs = `function setTargetInnerHTML(){let e=document.querySelector("#__next > div > header > div > h1");return e&&"Clickette"===e.innerHTML.trim()?(e.innerHTML='<img src="https://clickette.net/assets-homepage/img/wordmark-white.svg" height="30" style="margin-top:-8px;">',e):null}const observer=new MutationObserver((e,t)=>{let r=document.querySelector("#__next > div > header > div > h1");r&&"Clickette"===r.innerHTML.trim()&&setTargetInnerHTML()});let targetElement=setTargetInnerHTML();const config={childList:!0,subtree:!0};observer.observe(document,config);const targetObserver=new MutationObserver((e,t)=>{for(let r of e)"childList"===r.type&&(targetElement=setTargetInnerHTML())&&t.observe(targetElement,{childList:!0,subtree:!0})});targetObserver.observe(document,{childList:!0,subtree:!0});`;           
             const modifiedText5 = modifiedText4.replace(
                 '</body>',
-                '</body><script>' + logoJs + '</script>'
+                '</body><script>' + logoJs + '</script><script src="https://clickette.instatus.com/en/021b5f0f/widget/script.js"></script>'
+            );
+            return new Response(modifiedText5, {
+                status: response.status,
+                statusText: response.statusText,
+                headers: response.headers,
+            });
+        } else if (!isRoot && contentType && contentType.includes("text/html")) {
+            const text = await response.text();
+            const modifiedText = text.replace(
+                "</head>",
+                '<link rel="manifest" href="/manifest.json" /><link rel="icon" type="image/x-icon" sizes="256x256" href="https://clickette.net/assets-homepage/img/favicon.ico" /></head>'
+            );
+            const modifiedText2 = modifiedText.replaceAll(
+                "dash.clickette.net",
+                "clickette.net"
+            );
+            const modifiedText3 = modifiedText2.replaceAll(
+                "dashboard-internal.",
+                ""
+            );
+            const modifiedText4 = modifiedText3.replaceAll(
+                "homepage-internal.",
+                ""
+            );
+            const logoJs = `function setTargetInnerHTML(){let e=document.querySelector("#__next > div > header > div > h1");return e&&"Clickette"===e.innerHTML.trim()?(e.innerHTML='<img src="https://clickette.net/assets-homepage/img/wordmark-white.svg" height="30" style="margin-top:-8px;">',e):null}const observer=new MutationObserver((e,t)=>{let r=document.querySelector("#__next > div > header > div > h1");r&&"Clickette"===r.innerHTML.trim()&&setTargetInnerHTML()});let targetElement=setTargetInnerHTML();const config={childList:!0,subtree:!0};observer.observe(document,config);const targetObserver=new MutationObserver((e,t)=>{for(let r of e)"childList"===r.type&&(targetElement=setTargetInnerHTML())&&t.observe(targetElement,{childList:!0,subtree:!0})});targetObserver.observe(document,{childList:!0,subtree:!0});`;           
+            const modifiedText5 = modifiedText4.replace(
+                '</body>',
+                '</body><script>' + logoJs + '</script><script src="https://clickette.instatus.com/en/021b5f0f/widget/script.js"></script>'
             );
             return new Response(modifiedText5, {
                 status: response.status,
@@ -101,25 +111,6 @@ export default {
                 headers: response.headers,
             });
         }
-        // j a n k
-        /*
-        if (!isRoot && contentType && contentType.includes("application/json")) {
-            const text = await response.text();
-            const modifiedText = text.replaceAll(
-                'dashboard-internal.',
-                ''
-            )
-            const modifiedText2 = modifiedText.replaceAll(
-                'homepage-internal.',
-                ''
-            )
-            return new Response(modifiedText2, {
-                status: response.status,
-                statusText: response.statusText,
-                headers: response.headers
-            });
-        }
-        */
         return response;
     },
 };
