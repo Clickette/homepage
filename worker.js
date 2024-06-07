@@ -1,5 +1,5 @@
 const RATE_LIMIT_TIME = 60 * 1000; // 1 minute in milliseconds
-const KV_NAMESPACE = "REGISTRATION_LIMIT";
+let lastRegistrationTime = 0;
 
 export default {
     async fetch(request, env, ctx) {
@@ -7,22 +7,14 @@ export default {
         const path = url.pathname;
 
         if (path === '/auth/register') {
-            const clientIP = request.headers.get('cf-connecting-ip');
             const currentTimestamp = Date.now();
-            const key = `register:${clientIP}`;
 
-            // Fetch the last registration timestamp from KV
-            const lastTimestamp = await env[KV_NAMESPACE].get(key);
-
-            if (lastTimestamp) {
-                const elapsedTime = currentTimestamp - parseInt(lastTimestamp);
-                if (elapsedTime < RATE_LIMIT_TIME) {
-                    return new Response('Too many requests, please try again later.', { status: 429 });
-                }
+            if (currentTimestamp - lastRegistrationTime < RATE_LIMIT_TIME) {
+                return new Response('Too many requests, please try again later.', { status: 429 });
             }
 
-            // Store the new registration timestamp in KV
-            await env[KV_NAMESPACE].put(key, currentTimestamp.toString());
+            // Update the last registration timestamp
+            lastRegistrationTime = currentTimestamp;
         }
 
         const isRoot =
