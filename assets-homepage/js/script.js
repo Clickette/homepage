@@ -39,3 +39,11 @@
         }
     })();
 })();
+
+// detect login using "authed" cookie (bool)
+
+if (document.cookie.includes("authed=true")) {
+    document.querySelector("#navcol-1 > ul > li > a").remove();
+    document.querySelector("#navcol-1 > a").innerHTML = 'Dashboard';
+    document.querySelector("#navcol-1 > a").href = 'https://clickette.net/dashboard';
+}
