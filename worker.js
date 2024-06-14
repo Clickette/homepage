@@ -6,12 +6,6 @@ export default {
         const url = new URL(request.url);
         const path = url.pathname;
 
-        // Check the Referer header
-        const referer = request.headers.get('Referer');
-        if (referer && referer.includes('accounts.google.com') && path === "/" || path.startsWith("/index.html")) {
-            return Response.redirect('https://clickette.net/dashboard', 302);
-        }
-
         if (path === '/auth/register') {
             const currentTimestamp = Date.now();
 
