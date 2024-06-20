@@ -1,20 +1,20 @@
 const RATE_LIMIT_TIME = 60 * 1000; // 1 minute in milliseconds
-let lastRegistrationTime = 0;
 
 export default {
     async fetch(request, env, ctx) {
         const url = new URL(request.url);
         const path = url.pathname;
 
-        if (path === '/auth/register') {
+        if (path.startsWith('/api/auth/register')) {
             const currentTimestamp = Date.now();
+            const lastRegistrationTime = await env.MY_KV_NAMESPACE.get('lastRegistrationTime');
 
-            if (currentTimestamp - lastRegistrationTime < RATE_LIMIT_TIME) {
+            if (lastRegistrationTime && currentTimestamp - parseInt(lastRegistrationTime) < RATE_LIMIT_TIME) {
                 return new Response('Too many requests, please try again later.', { status: 429 });
             }
 
             // Update the last registration timestamp
-            lastRegistrationTime = currentTimestamp;
+            await env.MY_KV_NAMESPACE.put('lastRegistrationTime', currentTimestamp.toString());
         }
 
         const isRoot =
