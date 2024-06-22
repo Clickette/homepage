@@ -1,624 +1,218 @@
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-        />
-        <title>Home - Clickette</title>
-        <link rel="canonical" href="https://clickette.net/" />
-        <meta property="og:url" content="https://clickette.net/" />
-        <meta
-            name="twitter:description"
-            content="The next generation file storage - Packed with features and a great dashboard. What more could you want?"
-        />
-        <meta
-            name="twitter:image"
-            content="https://clickette.net/assets-homepage/img/clickette-portrait.png"
-        />
-        <meta
-            property="og:image"
-            content="https://clickette.net/assets-homepage/img/clickette-front.png"
-        />
-        <meta
-            name="description"
-            content="The next generation file storage - Packed with features and a great dashboard. What more could you want?"
-        />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Clickette" />
-        <script type="application/ld+json">
-            {
-                "@context": "http://schema.org",
-                "@type": "WebSite",
-                "name": "Clickette",
-                "url": "https://clickette.net"
-            }
-        </script>
-        <link
-            rel="icon"
-            type="image/x-icon"
-            href="https://clickette.net/assets-homepage/img/favicon.ico"
-        />
-        <link
-            rel="stylesheet"
-            href="assets-homepage/bootstrap/css/bootstrap.min.css?h=4a137410e50fe91a22b09a0763454a44"
-        />
-        <link
-            rel="stylesheet"
-            href="assets-homepage/css/styles.css?h=fed02d15b0ecf1d8154dbc8ce87c864f"
-        />
-        <style>
-            :root {
-                color-scheme: dark;
-            }
-        </style>
-        <link rel="manifest" href="/manifest.json" />
-    </head>
-    <body>
-        <nav
-            class="navbar navbar-expand-sm sticky-top py-3 navbar-dark"
-            id="mainNav"
-            style="
-                background: #0c101c;
-                border-bottom-style: solid;
-                border-bottom-color: #171f35;
-            "
-        >
-            <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="/"
-                    ><span
-                        ><img
-                            class="d-inline-flex align-items-xl-center"
-                            src="assets-homepage/img/wordmark-color.svg?h=4d93j8cd096a744cf69949ccfb8e3e88"
-                            width="512"
-                            height="512"
-                            style="
-                                width: 125px;
-                                height: 40px;
-                                margin-right: 7px;
-                                margin-top: -2px;
-                            " /></span></a
-                ><button
-                    data-bs-toggle="collapse"
-                    class="navbar-toggler"
-                    data-bs-target="#navcol-1"
-                >
-                    <span class="visually-hidden">Toggle navigation</span
-                    ><span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a
-                                class="nav-link"
-                                href="https://clickette.net/auth/login?url=/dashboard"
-                                style="margin-right: 20px"
-                                ><strong>Log In</strong></a
-                            >
-                        </li>
-                    </ul>
-                    <a
-                        class="btn btn-primary shadow"
-                        role="button"
-                        href="https://clickette.net/auth/register"
-                        >Sign Up</a
-                    >
-                </div>
-            </div>
-        </nav>
-        
-        <style>
-            .sticky-container {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                margin: 0 auto;
-            }
-    
-            .content-container {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 3rem; /* 12 * 0.25rem */
-                background-color: transparent;
-                color: white;
-            }
-    
-            .text-container {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 1rem; /* 4 * 0.25rem */
-            }
-    
-            .text-container span {
-                font-size: 0.75rem; /* 12px */
-                font-weight: 500;
-            }
-    
-            .divider {
-                display: none;
-                width: 1px;
-                height: 1.5rem; /* 6 * 0.25rem */
-                background-color: rgba(255, 255, 255, 0.2);
-            }
-    
-            @media (min-width: 640px) {
-                .divider {
-                    display: block;
-                }
-            }
-    
-            .link-button {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 0.5rem 1rem; /* 2 * 0.25rem, 4 * 0.25rem */
-                font-size: 0.75rem; /* 12px */
-                font-weight: 600;
-                border-radius: 0.5rem; /* 8px */
-                height: 2rem; /* 8 * 0.25rem */
-                color: white;
-                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.15));
-                transition: all 0.3s;
-                border: 1px inset rgba(255, 255, 255, 0.2);
-            }
-    
-            .link-button:hover {
-                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.25));
-            }
-        </style>
-        <div class="sticky-container">
-            <div class="content-container">
-                <div class="text-container">
-                    <span style="text-align:center;">We have updated our Terms of Service and Privacy Policy, and encourage you to read them.</span>
-                </div>
-            </div>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>Home - Clickette</title>
+    <link rel="canonical" href="https://clickette.net/">
+    <meta property="og:url" content="https://clickette.net/">
+    <meta name="twitter:description" content="The next generation file storage - Packed with features and a great dashboard. What more could you want?">
+    <meta name="twitter:image" content="./assets-homepage/img/clickette-portrait.png">
+    <meta property="og:image" content="./assets-homepage/img/clickette-front.png">
+    <meta name="description" content="The next generation file storage - Packed with features and a great dashboard. What more could you want?">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Clickette">
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Clickette",
+            "url": "https://clickette.net"
+        }
+    </script>
+    <style>
+        body {
+          background: linear-gradient(to bottom, #1D1A27, #15131C);
+        }
+        .click {
+            color: #575071;
+        }
+    </style>
+    <link rel="stylesheet" href="./assets-homepage/css/tailwind.css">
+    <script src="./assets-homepage/js/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="./assets-homepage/img/favicon.ico">
+    <style>:root{color-scheme:dark}</style>
+    <link rel="manifest" href="/manifest.json">
+</head>
+
+<body class="flex flex-col items-center justify-between min-h-screen text-white">
+  
+    <div class="sticky justify-center w-full mx-auto bg-gradient-to-b from-black/50 to-transparent">
+      <div class="flex items-center justify-center h-12 text-white bg-transparent">
+        <div class="flex items-center justify-center gap-4">
+          <div class="text-xs font-medium">
+            <span>We've updated Vault's homepage</span>
+          </div>
+          <div class="hidden w-px h-6 sm:block bg-white/20"></div>
+          <div>
+            <a class="duration-200 text-xs flex font-semibold items-center justify-center px-4 py-2 rounded-lg transition-all h-8 text-white bg-gradient-to-b from-white/[.105] hover:to-white/[.25] ring-1 ring-inset ring-white/20 to-white/[.15]" href="https://github.com/Clickette/search">Learn more &nbsp; 🡪</a>
+          </div>
         </div>
-        <header class="bg-dark">
-            <div class="container py-5">
-                <div
-                    class="row py-5"
-                    style="
-                        padding-top: 0px;
-                        margin-top: -77px;
-                        margin-bottom: -209px;
-                    "
-                >
-                    <div
-                        class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-end mb-4"
-                    >
-                        <div style="max-width: 450px">
-                            <p class="fw-bold text-success mb-2">Brand New</p>
-                            <h2 class="fw-bold">
-                                The next generation file storage
-                            </h2>
-                            <p class="my-3">
-                                <strong
-                                    >Packed with features and a great dashboard.
-                                    What more could you want?</strong
-                                >
-                            </p>
-                            <div class="my-2">
-                                <a
-                                    class="btn btn-primary shadow"
-                                    role="button"
-                                    href="https://clickette.net/dashboard/"
-                                    >Get Started</a
-                                >
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div
-                            class="p-5 mx-lg-5"
-                            style="
-                                background: url('assets-homepage/img/blob.svg?h=74f98e7ba9474e69f8af1fb99ce964c6')
-                                    center / contain no-repeat;
-                            "
-                        >
-                            <img
-                                class="rounded img-fluid w-100 fit-cover"
-                                style="
-                                    min-height: 300px;
-                                    backdrop-filter: opacity(1);
-                                    width: 264px !important;
-                                "
-                                src="assets-homepage/img/clickette-portrait.png?h=ddfdfdd49f5ccaaa3960278723f61e71"
-                            />
-                        </div>
-                    </div>
-                </div>
+      </div>
+      <div x-data="{ open: false }" class="flex flex-col items-center justify-center w-full px-8 py-2 mx-auto md:px-12 md:flex-row lg:px-32 max-w-7xl">
+        <div class="flex flex-row items-center justify-center w-full text-black">
+          <a class="inline-flex items-center justify-center gap-3 text-xl font-bold tracking-tight text-black" href="/">
+            <img class="w-32" alt="Clickette" src="./assets-homepage/img/logo.svg">
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <section>
+      <div class="px-8 py-24 mx-auto md:px-12 lg:px-32 max-w-7xl">
+        <div>
+          <div class="grid items-end grid-cols-1 gap-8 lg:grid-cols-3">
+            <div class="w-full lg:col-span-2">
+              <h1 class="text-4xl text-white font-semibold tracking-tighter lg:text-5xl">
+                The next generation file
+                storage platform <span class="font-bold bg-clip-text text-transparent bg-gradient-to-t from-zinc-400 to-zinc-200">that's free.</span>
+              </h1>
             </div>
-        </header>
-        <section class="py-5">
-            <div
-                class="container text-center py-5"
-                style="margin-bottom: -136px; margin-top: -22px"
-            >
-                <p class="mb-4" style="font-size: 1.6rem">
-                    Used by
-                    <span class="text-success"><strong>30+</strong></span
-                    >&nbsp;people every day with&nbsp;<span class="text-success"
-                        ><strong>594+</strong></span
-                    >&nbsp;files uploaded.
-                </p>
+            <p class="text-base font-medium text-zinc-400 ">
+              Easy to use, packed with features and a great dashboard. All that, and more, all for free! 
+            </p>
+          </div>
+  
+        <div class="relative items-center w-full py-12 pb-12 mx-auto mt-12 max-w-7xl">
+          <svg fill="none" viewBox="0 0 400 400" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg" class="absolute -mt-24 blur-3xl">
+            <g clip-path="url(#clip0_10_20)">
+              <g filter="url(#filter0_f_10_20)">
+                <path d="M128.6 0H0V322.2L106.2 134.75L128.6 0Z" fill="#ff237d"></path>
+                <path d="M0 322.2V400H240H320L106.2 134.75L0 322.2Z" fill="#7C87F8"></path>
+                <path d="M320 400H400V78.75L106.2 134.75L320 400Z" fill="#4C65E4"></path>
+                <path d="M400 0H128.6L106.2 134.75L400 78.75V0Z" fill="#043AFF"></path>
+              </g>
+            </g>
+            <defs>
+              <filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="720.666" id="filter0_f_10_20" width="720.666" x="-160.333" y="-160.333">
+                <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                <feblend in="SourceGraphic" in2="BackgroundImageFix" mode="normal" result="shape"></feblend>
+                <fegaussianblur result="effect1_foregroundBlur_10_20" stdDeviation="80.1666"></fegaussianblur>
+              </filter>
+            </defs></svg>
+            <img alt="showcase" class="relative object-cover w-full rounded shadow-2xl lg:rounded-2xl" src="https://clickette.net/assets-homepage/img/brave_jRuafLPwGp.png?h=c1b2988b936f09692afa403e3bd9e5c6">
+        </div>
+          <dl class="grid grid-cols-1 gap-6 mt-12 lg:grid-cols-3 text-balance">
+            <div>
+              <dt class="font-medium text-white">Organizations &amp; folders</dt>
+              <dd class="mt-2 text-sm font-medium text-zinc-400">
+                Folders makes organizing your files incredibly easy and simple, it can be done in mere seconds. 
+              </dd>
             </div>
-        </section>
-        <section>
-            <div class="container bg-dark py-5">
-                <div class="row">
-                    <div class="col-md-8 col-xl-6 text-center mx-auto">
-                        <p class="fw-bold text-success mb-2">Features</p>
-                        <h3 class="fw-bold">
-                            Here's some of our favorite features.
-                        </h3>
-                    </div>
-                </div>
-                <div class="py-5 p-lg-5">
-                    <div
-                        class="row row-cols-1 row-cols-md-2 mx-auto"
-                        style="max-width: 900px"
-                    >
-                        <div class="col mb-5">
-                            <div class="card shadow-sm">
-                                <div class="card-body px-4 py-5 px-md-5">
-                                    <div
-                                        class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon"
-                                        style="
-                                            top: 1rem;
-                                            right: 1rem;
-                                            position: absolute;
-                                        "
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="1em"
-                                            height="1em"
-                                            viewBox="0 0 24 24"
-                                            stroke-width="2"
-                                            stroke="currentColor"
-                                            fill="none"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            class="icon icon-tabler icon-tabler-link text-success"
-                                        >
-                                            <path
-                                                stroke="none"
-                                                d="M0 0h24v24H0z"
-                                                fill="none"
-                                            ></path>
-                                            <path d="M9 15l6 -6"></path>
-                                            <path
-                                                d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"
-                                            ></path>
-                                            <path
-                                                d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"
-                                            ></path>
-                                        </svg>
-                                    </div>
-                                    <h5 class="fw-bold card-title">
-                                        URL Shortening
-                                    </h5>
-                                    <p class="text-muted card-text mb-4">
-                                        Shorten URLs with Clickette with
-                                        vanities and maximum views.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col mb-5">
-                            <div class="card shadow-sm">
-                                <div class="card-body px-4 py-5 px-md-5">
-                                    <div
-                                        class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon"
-                                        style="
-                                            top: 1rem;
-                                            right: 1rem;
-                                            position: absolute;
-                                        "
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="1em"
-                                            height="1em"
-                                            viewBox="0 0 24 24"
-                                            stroke-width="2"
-                                            stroke="currentColor"
-                                            fill="none"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            class="icon icon-tabler icon-tabler-key text-success"
-                                        >
-                                            <path
-                                                stroke="none"
-                                                d="M0 0h24v24H0z"
-                                                fill="none"
-                                            ></path>
-                                            <path
-                                                d="M16.555 3.843l3.602 3.602a2.877 2.877 0 0 1 0 4.069l-2.643 2.643a2.877 2.877 0 0 1 -4.069 0l-.301 -.301l-6.558 6.558a2 2 0 0 1 -1.239 .578l-.175 .008h-1.172a1 1 0 0 1 -.993 -.883l-.007 -.117v-1.172a2 2 0 0 1 .467 -1.284l.119 -.13l.414 -.414h2v-2h2v-2l2.144 -2.144l-.301 -.301a2.877 2.877 0 0 1 0 -4.069l2.643 -2.643a2.877 2.877 0 0 1 4.069 0z"
-                                            ></path>
-                                            <path d="M15 9h.01"></path>
-                                        </svg>
-                                    </div>
-                                    <h5 class="fw-bold card-title">
-                                        Password Protection
-                                    </h5>
-                                    <p class="text-muted card-text mb-4">
-                                        Protect your uploads safely with a
-                                        password.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col mb-4">
-                            <div class="card shadow-sm">
-                                <div class="card-body px-4 py-5 px-md-5">
-                                    <div
-                                        class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon"
-                                        style="
-                                            top: 1rem;
-                                            right: 1rem;
-                                            position: absolute;
-                                        "
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="1em"
-                                            height="1em"
-                                            viewBox="0 0 24 24"
-                                            stroke-width="2"
-                                            stroke="currentColor"
-                                            fill="none"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            class="icon icon-tabler icon-tabler-folder text-success"
-                                        >
-                                            <path
-                                                stroke="none"
-                                                d="M0 0h24v24H0z"
-                                                fill="none"
-                                            ></path>
-                                            <path
-                                                d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2"
-                                            ></path>
-                                        </svg>
-                                    </div>
-                                    <h5 class="fw-bold card-title">Folders</h5>
-                                    <p class="text-muted card-text mb-4">
-                                        Organize your favorite uploads with
-                                        folders.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col mb-4">
-                            <div class="card shadow-sm">
-                                <div class="card-body px-4 py-5 px-md-5">
-                                    <div
-                                        class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon"
-                                        style="
-                                            top: 1rem;
-                                            right: 1rem;
-                                            position: absolute;
-                                        "
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="1em"
-                                            height="1em"
-                                            viewBox="0 0 24 24"
-                                            stroke-width="2"
-                                            stroke="currentColor"
-                                            fill="none"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            class="icon icon-tabler icon-tabler-file-upload text-success"
-                                        >
-                                            <path
-                                                stroke="none"
-                                                d="M0 0h24v24H0z"
-                                                fill="none"
-                                            ></path>
-                                            <path
-                                                d="M14 3v4a1 1 0 0 0 1 1h4"
-                                            ></path>
-                                            <path
-                                                d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
-                                            ></path>
-                                            <path d="M12 11v6"></path>
-                                            <path
-                                                d="M9.5 13.5l2.5 -2.5l2.5 2.5"
-                                            ></path>
-                                        </svg>
-                                    </div>
-                                    <h5 class="fw-bold card-title">
-                                        Upload Any File
-                                    </h5>
-                                    <p class="text-muted card-text mb-4">
-                                        Upload images and text to Clickette,
-                                        with support for syntax highlighting.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div>
+              <dt class="font-medium text-white">URL Shortener</dt>
+              <dd class="mt-2 text-sm text-zinc-400">
+                Everything you upload can be shared through our URL shorterner service built in to our dashboard. 
+              </dd>
             </div>
-        </section>
-        <section>
-            <div class="container bg-dark py-5">
-                <div class="row">
-                    <div
-                        class="col-md-8 col-xl-6 text-center mx-auto"
-                        style="margin-bottom: 20px"
-                    >
-                        <h3 class="fw-bold">Screenshots</h3>
-                    </div>
-                </div>
-                <div
-                    class="carousel slide text-center d-xl-flex mx-auto justify-content-xl-center shadow"
-                    data-bs-ride="carousel"
-                    id="carousel-1"
-                    style="
-                        width: 80%;
-                        text-align: center;
-                        border-radius: 1rem;
-                        border-style: solid;
-                        border-color: #171f35;
-                        border-bottom-style: solid;
-                        border-bottom-color: #171f35;
-                    "
-                >
-                    <div class="carousel-inner" style="border-radius: 1rem">
-                        <div class="carousel-item active">
-                            <img
-                                class="w-100 d-block"
-                                src="assets-homepage/img/brave_jRuafLPwGp.png?h=c1b2988b936f09692afa403e3bd9e5c6"
-                                alt="Slide Image"
-                            />
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                class="w-100 d-block"
-                                src="assets-homepage/img/brave_ZOyPnFyInU.jpg?h=c1b2988b936f09692afa403e3bd9e5c6"
-                                alt="Slide Image"
-                            />
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                class="w-100 d-block"
-                                src="assets-homepage/img/brave_e4v8JVCBeq.png?h=c1b2988b936f09692afa403e3bd9e5c6"
-                                alt="Slide Image"
-                            />
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                class="w-100 d-block"
-                                src="assets-homepage/img/brave_2u5o0ZI8qd.png?h=c1b2988b936f09692afa403e3bd9e5c6"
-                                alt="Slide Image"
-                            />
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                class="w-100 d-block"
-                                src="assets-homepage/img/brave_5KyBcakRHb.png?h=f3522efddc2f16c13758f119178a2fb5"
-                                alt="Slide Image"
-                            />
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                class="w-100 d-block"
-                                src="assets-homepage/img/brave_UuhdWxo6DV.png?h=c1b2988b936f09692afa403e3bd9e5c6"
-                                alt="Slide Image"
-                            />
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                class="w-100 d-block"
-                                src="assets-homepage/img/brave_ZRkfG78pPh.png?h=f3522efddc2f16c13758f119178a2fb5"
-                                alt="Slide Image"
-                            />
-                        </div>
-                    </div>
-                    <div>
-                        <a
-                            class="carousel-control-prev"
-                            href="#carousel-1"
-                            role="button"
-                            data-bs-slide="prev"
-                            ><span class="carousel-control-prev-icon"></span
-                            ><span class="visually-hidden">Previous</span></a
-                        ><a
-                            class="carousel-control-next"
-                            href="#carousel-1"
-                            role="button"
-                            data-bs-slide="next"
-                            ><span class="carousel-control-next-icon"></span
-                            ><span class="visually-hidden">Next</span></a
-                        >
-                    </div>
-                    <div class="carousel-indicators">
-                        <button
-                            type="button"
-                            data-bs-target="#carousel-1"
-                            data-bs-slide-to="0"
-                            class="active"
-                        ></button>
-                        <button
-                            type="button"
-                            data-bs-target="#carousel-1"
-                            data-bs-slide-to="1"
-                        ></button>
-                        <button
-                            type="button"
-                            data-bs-target="#carousel-1"
-                            data-bs-slide-to="2"
-                        ></button>
-                        <button
-                            type="button"
-                            data-bs-target="#carousel-1"
-                            data-bs-slide-to="3"
-                        ></button>
-                        <button
-                            type="button"
-                            data-bs-target="#carousel-1"
-                            data-bs-slide-to="4"
-                        ></button>
-                        <button
-                            type="button"
-                            data-bs-target="#carousel-1"
-                            data-bs-slide-to="5"
-                        ></button>
-                        <button
-                            type="button"
-                            data-bs-target="#carousel-1"
-                            data-bs-slide-to="6"
-                        ></button>
-                    </div>
-                </div>
+            <div>
+              <dt class="font-medium text-white">Secure file sharing</dt>
+              <dd class="mt-2 text-sm text-zinc-400">
+                You can secure your files easily by adding a password to access them instead of keeping them public. 
+              </dd>
             </div>
-        </section>
-        <footer class="text-center py-4" style="background: #05070f">
-            <div class="container">
-                <div class="row row-cols-1 row-cols-lg-3">
-                    <div class="col">
-                        <p class="text-muted my-2">
-                            <strong>Copyright&nbsp;© 2024 hamhim</strong>
-                        </p>
-                    </div>
-                    <div class="col align-items-end">
-                        <ul
-                            class="list-inline d-xl-flex align-items-end justify-content-xl-center my-2"
-                        >
-                            <li class="list-inline-item me-4"></li>
-                            <li
-                                class="list-inline-item d-xl-flex justify-content-xl-center"
-                            >
-                                <a
-                                    class="d-xl-flex justify-content-xl-center nav-link"
-                                    href="privacy"
-                                    style="color: #ffffffc0"
-                                    ><strong>Privacy Policy</strong></a
-                                >
-                            </li>
-                            <li
-                                class="list-inline-item d-xl-flex justify-content-xl-center"
-                            >
-                                <a
-                                    class="d-xl-flex justify-content-xl-center nav-link"
-                                    href="terms"
-                                    style="color: #ffffffc0"
-                                    ><strong>Terms</strong></a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+          </dl>
+        </div>
+      </div>
+      <div class="px-8 py-24 mx-auto md:px-12 lg:px-32 max-w-7xl">
+        <div>
+          <h1 class="text-4xl font-semibold tracking-tighter text-slate-200 lg:text-5xl">
+            The people behind
+            <span class="block font-bold bg-clip-text text-transparent bg-gradient-to-t from-zinc-400 to-zinc-200">Clickette Vault</span>
+          </h1>
+        <ul class="mt-12 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-12">
+          <li>
+            <div class="flex flex-col gap-4">
+              <img class="object-cover rounded-full size-16 lg:size-20" src="https://avatars.githubusercontent.com/u/110255725?s=128" alt="">
+              <div class="space-y-1">
+                <h3 class="text-lg font-medium leading-6 text-white">
+                  hamhim
+                </h3>
+                <p class="text-base text-[#7D7794]">Lead Dev &amp; Designer</p>
+              </div>
             </div>
-        </footer>
-        <script src="assets-homepage/bootstrap/js/bootstrap.min.js?h=e55bde7d6e36ebf17ba0b8c1e80e4065"></script>
-        <script src="assets-homepage/js/script.js?h=9a9b12d9479055b6ccf322643488f6dd"></script>
-    </body>
+          </li>
+          <li>
+            <div class="flex flex-col gap-4">
+              <img class="object-cover rounded-full size-16 lg:size-20" src="https://avatars.githubusercontent.com/u/71360210?s=128" alt="">
+              <div class="space-y-1">
+                <h3 class="text-lg font-medium leading-6 text-white">
+                  ClaytonTDM
+                </h3>
+                <p class="text-base text-[#7D7794]">Lead Dev &amp; Founder</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="flex flex-col gap-4">
+              <img class="object-cover rounded-full size-16 lg:size-20" src="https://avatars.githubusercontent.com/u/81354905?s=128" alt="">
+              <div class="space-y-1">
+                <h3 class="text-lg font-medium leading-6 text-white">
+                  TheUnium
+                </h3>
+                <p class="text-base text-[#7D7794]">Developer &amp; Designer</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="flex flex-col gap-4">
+              <img class="object-cover rounded-full size-16 lg:size-20" src="https://avatars.githubusercontent.com/u/79881161?s=128" alt="">
+              <div class="space-y-1">
+                <h3 class="text-lg font-medium leading-6 text-white">
+                  Armando Hinojosa
+                </h3>
+                <p class="text-base text-[#7D7794]">Developer &amp; Mod</p>
+              </div>
+            </div>
+          </li>
+    
+        </ul>
+      </div>
+    </div>
+    </section>
+  
+    <section>
+      <div class="px-8 py-24 mx-auto md:px-12 lg:px-32 max-w-7xl">
+        <div class="text-center">
+          <h1 class="text-4xl font-semibold tracking-tighter text-gray-white lg:text-5xl text-balance">
+            We serve 69,420+ files, uploaded by 69+ people. 
+          </h1>
+          <p class="max-w-xl mx-auto mt-4 text-xl font-medium text-zinc-400 text-balance">
+            So, what are you waiting for? Sign up for Clickette Vault now, and enjoy free and efficient file sharing, that is right on your fingertips!
+          </p>
+          <div class="flex flex-col items-center justify-center gap-2 mx-auto mt-8 md:flex-row">
+            <button type="submit" class="p-3 border border-orange-500 bg-transparent text-white rounded-l-md hover:bg-orange-500 transition ease-in-out shadow hover:shadow-[0_0px_60px_20px_rgba(255,94,0,0.3)]">
+              Sign Up
+          </button>
+            <button type="submit" class="p-3 border border-orange-500 bg-transparent text-white rounded-r-md hover:bg-orange-500 transition ease-in-out shadow hover:shadow-[0_0px_60px_20px_rgba(255,94,0,0.3)]">
+              Login
+          </button>
+          <button type="submit" class="p-3 border border-orange-500 bg-transparent text-white rounded-md hover:bg-orange-500 transition ease-in-out shadow hover:shadow-[0_0px_60px_20px_rgba(255,94,0,0.3)]">
+            Sign Up
+        </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <div class="flex flex-col items-center mb-4 w-full px-4 md:px-0">
+      <div class="flex flex-col md:flex-row justify-center items-center w-full mb-2">
+          <div class="text-center mb-4 md:mb-0 md:mr-4">
+              <p><a class="my-2 relative font-medium text-[#7D7794] hover:text-[#C9503B] before:absolute before:h-0.5 before:w-full before:-bottom-0.5 before:origin-center before:scale-x-0 before:bg-gradient-to-l before:from-[#EE6D15] before:to-[#C74900] before:transition hover:before:scale-100" href="https://clickette.net/contact">Contact Us</a></p>
+              <p><a class="my-2 relative font-medium text-[#7D7794] hover:text-[#C9503B] before:absolute before:h-0.5 before:w-full before:-bottom-0.5 before:origin-center before:scale-x-0 before:bg-gradient-to-l before:from-[#EE6D15] before:to-[#C74900] before:transition hover:before:scale-100" href="https://team.clickette.net/">Team Clickette</a></p>
+          </div>
+          <img src="./assets-homepage/img/logo2.svg" alt="hamhim" class="duration-200 transition ease-in-out hover:drop-shadow-[0_3px_0px_rgba(87,80,113,0.25)] mx-4 w-16 md:w-24">
+          <div class="text-center mt-4 md:mt-0 md:ml-4">
+              <p><a class="my-2 relative font-medium text-[#7D7794] hover:text-[#C9503B] before:absolute before:h-0.5 before:w-full before:-bottom-0.5 before:origin-center before:scale-x-0 before:bg-gradient-to-l before:from-[#EE6D15] before:to-[#C74900] before:transition hover:before:scale-100" href="https://clickette.net/terms">Terms of Service</a></p>
+              <p><a class="my-2 relative font-medium text-[#7D7794] hover:text-[#C9503B] before:absolute before:h-0.5 before:w-full before:-bottom-0.5 before:origin-center before:scale-x-0 before:bg-gradient-to-l before:from-[#EE6D15] before:to-[#C74900] before:transition hover:before:scale-100" href="https://clickette.net/privacy">Privacy Policy</a></p>
+          </div>
+      </div>
+      <p style="color: #7D7794;" class="text-center text-sm mt-2">We never put trackers on you, ever. Powered by <a style="color: #6A618A;" href="https://github.com/Clickette" class="transition ease-in-out shadow hover:drop-shadow-[0_2px_0px_rgba(87,80,113,0.25)]">Open Source</a>.</p>
+    </div>
+    <script src="./assets-homepage/js/scripts.min.js"></script>
+    <script src="./assets-homepage/js/main.js"></script>
+    <script src="./assets-homepage/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
