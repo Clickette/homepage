@@ -1,0 +1,17 @@
+@import url("inter.css");
+
+* {
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+.hovergradientp:hover {
+    box-shadow: inset -1px 60px 40px -40px hsla(23, 100%, 50%, 50%) !important;
+    border-color: hsl(23, 100%, 50%) !important;
+}
+.hovergradients:hover {
+    box-shadow: inset -1px 60px 40px -40px hsla(0, 0%, 79%, 50%) !important;
+    border-color: hsl(0, 0%, 79%) !important;
+}
+.hovergradients {
+    background-color: #00000039;
+}
