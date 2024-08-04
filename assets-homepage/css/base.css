@@ -24,10 +24,22 @@
     box-shadow: inset -1px 60px 40px -40px hsla(23, 100%, 50%, 50%) !important;
     border-color: hsl(23, 100%, 50%) !important;
 }
+
 .hovergradients:hover {
     box-shadow: inset -1px 60px 40px -40px hsla(0, 0%, 79%, 50%) !important;
     border-color: hsl(0, 0%, 79%) !important;
 }
+
+.hovergradientp:active {
+    box-shadow: inset -1px 60px 40px -40px hsla(23, 100%, 31%, 0.5) !important;
+    border-color: hsla(23, 100%, 50%, 50%) !important;
+}
+
+.hovergradients:active {
+    box-shadow: inset -1px 60px 40px -40px hsla(0, 0%, 44%, 0.5) !important;
+    border-color: hsla(0, 0%, 79%, 50%) !important;
+}
+
 .hovergradients {
     background-color: #00000039;
 }
