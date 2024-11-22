@@ -1,7 +1,7 @@
 {
     "name": "Clickette - Next Gen File Storage",
     "short_name": "Clickette",
-    "start_url": "https://clickette.net/dashboard",
+    "start_url": "https://clickette.org/dashboard",
     "display": "standalone",
     "description": "Packed with features and a great dashboard. What more could you want?",
     "lang": "en",
@@ -11,13 +11,13 @@
     "orientation": "any",
     "icons": [
         {
-            "src": "https://clickette.net/assets-homepage/img/clickette.png",
+            "src": "https://clickette.org/assets-homepage/img/clickette.png",
             "sizes": "395x395",
             "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "https://clickette.net/assets-homepage/img/maskable_icon_x512.png",
+            "src": "https://clickette.org/assets-homepage/img/maskable_icon_x512.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
@@ -25,7 +25,7 @@
     ],
     "screenshots": [
         {
-            "src": "https://clickette.net/assets-homepage/img/pwa-portrait.png",
+            "src": "https://clickette.org/assets-homepage/img/pwa-portrait.png",
             "sizes": "1280x1920",
             "type": "image/png",
             "description": "Clickette Dashboard"
@@ -35,11 +35,11 @@
     "shortcuts": [
         {
             "name": "Dashboard",
-            "url": "https://clickette.net/dashboard",
+            "url": "https://clickette.org/dashboard",
             "description": "View your Clickette dashboard",
             "icons": [
                 {
-                    "src": "https://clickette.net/assets-homepage/icons/home.png",
+                    "src": "https://clickette.org/assets-homepage/icons/home.png",
                     "sizes": "96x96",
                     "type": "image/png"
                 }
@@ -47,11 +47,11 @@
         },
         {
             "name": "Files",
-            "url": "https://clickette.net/dashboard/files?page=1",
+            "url": "https://clickette.org/dashboard/files?page=1",
             "description": "View all files in your Clickette account",
             "icons": [
                 {
-                    "src": "https://clickette.net/assets-homepage/icons/files.png",
+                    "src": "https://clickette.org/assets-homepage/icons/files.png",
                     "sizes": "96x96",
                     "type": "image/png"
                 }
@@ -59,11 +59,11 @@
         },
         {
             "name": "Folders",
-            "url": "https://clickette.net/dashboard/folders",
+            "url": "https://clickette.org/dashboard/folders",
             "description": "Create a new folder in your Clickette account",
             "icons": [
                 {
-                    "src": "https://clickette.net/assets-homepage/icons/folders.png",
+                    "src": "https://clickette.org/assets-homepage/icons/folders.png",
                     "sizes": "96x96",
                     "type": "image/png"
                 }
@@ -71,11 +71,11 @@
         },
         {
             "name": "Upload Files",
-            "url": "https://clickette.net/dashboard/upload/file",
+            "url": "https://clickette.org/dashboard/upload/file",
             "description": "Upload files to your Clickette account",
             "icons": [
                 {
-                    "src": "https://clickette.net/assets-homepage/icons/upload-files.png",
+                    "src": "https://clickette.org/assets-homepage/icons/upload-files.png",
                     "sizes": "96x96",
                     "type": "image/png"
                 }
@@ -83,11 +83,11 @@
         },
         {
             "name": "Upload Text",
-            "url": "https://clickette.net/dashboard/upload/text",
+            "url": "https://clickette.org/dashboard/upload/text",
             "description": "Upload text to your Clickette account",
             "icons": [
                 {
-                    "src": "https://clickette.net/assets-homepage/icons/upload-text.png",
+                    "src": "https://clickette.org/assets-homepage/icons/upload-text.png",
                     "sizes": "96x96",
                     "type": "image/png"
                 }
@@ -95,11 +95,11 @@
         },
         {
             "name": "URLs",
-            "url": "https://clickette.net/dashboard/urls",
+            "url": "https://clickette.org/dashboard/urls",
             "description": "Create a new short URL in your Clickette account",
             "icons": [
                 {
-                    "src": "https://clickette.net/assets-homepage/icons/urls.png",
+                    "src": "https://clickette.org/assets-homepage/icons/urls.png",
                     "sizes": "96x96",
                     "type": "image/png"
                 }
@@ -107,11 +107,11 @@
         },
         {
             "name": "Stats",
-            "url": "https://clickette.net/dashboard/stats",
+            "url": "https://clickette.org/dashboard/stats",
             "description": "View global stats for all of Clickette",
             "icons": [
                 {
-                    "src": "https://clickette.net/assets-homepage/icons/stats.png",
+                    "src": "https://clickette.org/assets-homepage/icons/stats.png",
                     "sizes": "96x96",
                     "type": "image/png"
                 }

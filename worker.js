@@ -39,8 +39,8 @@ export default {
             path.startsWith("/manifest.json");
         const newUrl = new URL(request.url);
         newUrl.host = isRoot
-            ? "homepage-internal.clickette.net"
-            : "dashboard-internal.clickette.net";
+            ? "homepage-internal.clickette.org"
+            : "dashboard-internal.clickette.org";
         newUrl.search = url.search; // Proxy query parameters
 
         // Create a new request and modify the headers
@@ -52,7 +52,7 @@ export default {
         });
 
         // Add the Override-Domain header
-        newRequest.headers.set("Override-Domain", "clickette.net");
+        newRequest.headers.set("Override-Domain", "clickette.org");
 
         const response = await fetch(newRequest);
 
@@ -62,11 +62,11 @@ export default {
             const text = await response.text();
             const modifiedText = text.replace(
                 "</head>",
-                '<link rel="manifest" href="/manifest.json" /><link rel="icon" type="image/x-icon" sizes="256x256" href="https://clickette.net/assets-homepage/img/favicon.ico" /></head>'
+                '<link rel="manifest" href="/manifest.json" /><link rel="icon" type="image/x-icon" sizes="256x256" href="https://clickette.org/assets-homepage/img/favicon.ico" /></head>'
             );
             const modifiedText2 = modifiedText.replaceAll(
-                "dash.clickette.net",
-                "clickette.net"
+                "dash.clickette.org",
+                "clickette.org"
             );
             const modifiedText3 = modifiedText2.replaceAll(
                 "dashboard-internal.",
@@ -76,12 +76,12 @@ export default {
                 "homepage-internal.",
                 ""
             );
-            const logoJs = `document.addEventListener("DOMContentLoaded",function(){let e=document.createElement("div");e.style.cssText="z-index:9999!important;width:100vw;height:50px;background-color:yellow;position:fixed;bottom:0;";let t=document.createElement("span");t.style.cssText="left:50%;color:black;position:absolute;top:50%;transform:translate(-50%,-50%);width:100vw;text-align:center;",t.innerHTML="<b>WARNING!</b> We are in the process of wiping possibly malicious files due to multiple malware reports by AdGuard, Fortinet and others. <i><b>Please email contact@clickette.net to retrieve falsely deleted files.</b></i>",e.appendChild(t),document.body.insertBefore(e,document.body.firstChild)});const style=document.documentElement.style;function getLogoSrc(){let e=style.getPropertyValue("color-scheme").trim();return"dark"===e?"https://clickette.net/assets-homepage/img/wordmark-white.svg":"https://clickette.net/assets-homepage/img/wordmark-black.svg"}function setTargetInnerHTML(){let e=document.querySelector("#__next > div > header > div > h1");if(e&&"Clickette"===e.innerHTML.trim()){let t=getLogoSrc();return e.innerHTML=\`<img id="logo" src="\${t}" height="30" style="margin-top:-8px;">\`,e}return null}function updateLogo(){let e=document.getElementById("logo");e&&(e.src=getLogoSrc())}const observer=new MutationObserver(e=>{let t=document.querySelector("#__next > div > header > div > h1");t&&"Clickette"===t.innerHTML.trim()&&setTargetInnerHTML()});let targetElement=setTargetInnerHTML();const config={childList:!0,subtree:!0};observer.observe(document,config);const targetObserver=new MutationObserver(e=>{for(let t of e)"childList"===t.type&&(targetElement=setTargetInnerHTML(),targetObserver.observe(targetElement,{childList:!0,subtree:!0}))});targetObserver.observe(document,{childList:!0,subtree:!0});const themeObserver=new MutationObserver(e=>{for(let t of e)"style"===t.attributeName&&updateLogo()});themeObserver.observe(document.documentElement,{attributes:!0,attributeFilter:["style"]}),updateLogo();`;
+            const logoJs = `document.addEventListener("DOMContentLoaded",function(){let e=document.createElement("div");e.style.cssText="z-index:9999!important;width:100vw;height:50px;background-color:yellow;position:fixed;bottom:0;";let t=document.createElement("span");t.style.cssText="left:50%;color:black;position:absolute;top:50%;transform:translate(-50%,-50%);width:100vw;text-align:center;",t.innerHTML="<b>WARNING!</b> We are in the process of wiping possibly malicious files due to multiple malware reports by AdGuard, Fortinet and others. <i><b>Please email contact@clickette.org to retrieve falsely deleted files.</b></i>",e.appendChild(t),document.body.insertBefore(e,document.body.firstChild)});const style=document.documentElement.style;function getLogoSrc(){let e=style.getPropertyValue("color-scheme").trim();return"dark"===e?"https://clickette.org/assets-homepage/img/wordmark-white.svg":"https://clickette.org/assets-homepage/img/wordmark-black.svg"}function setTargetInnerHTML(){let e=document.querySelector("#__next > div > header > div > h1");if(e&&"Clickette"===e.innerHTML.trim()){let t=getLogoSrc();return e.innerHTML=\`<img id="logo" src="\${t}" height="30" style="margin-top:-8px;">\`,e}return null}function updateLogo(){let e=document.getElementById("logo");e&&(e.src=getLogoSrc())}const observer=new MutationObserver(e=>{let t=document.querySelector("#__next > div > header > div > h1");t&&"Clickette"===t.innerHTML.trim()&&setTargetInnerHTML()});let targetElement=setTargetInnerHTML();const config={childList:!0,subtree:!0};observer.observe(document,config);const targetObserver=new MutationObserver(e=>{for(let t of e)"childList"===t.type&&(targetElement=setTargetInnerHTML(),targetObserver.observe(targetElement,{childList:!0,subtree:!0}))});targetObserver.observe(document,{childList:!0,subtree:!0});const themeObserver=new MutationObserver(e=>{for(let t of e)"style"===t.attributeName&&updateLogo()});themeObserver.observe(document.documentElement,{attributes:!0,attributeFilter:["style"]}),updateLogo();`;
             const modifiedText5 = modifiedText4.replace(
                 "</body>",
                 "</body><script>" +
                     logoJs +
-                    '</script><script src="https://clickette.instatus.com/en/021b5f0f/widget/script.js"></script><script async defer src="https://s.clickette.net/latest.js"></script> <noscript><img src="https://s.clickette.net/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>'
+                    '</script><script src="https://clickette.instatus.com/en/021b5f0f/widget/script.js"></script><script async defer src="https://s.clickette.org/latest.js"></script> <noscript><img src="https://s.clickette.org/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>'
             );
             return new Response(modifiedText5, {
                 status: response.status,
@@ -96,11 +96,11 @@ export default {
             const text = await response.text();
             const modifiedText = text.replace(
                 "</head>",
-                '<link rel="manifest" href="/manifest.json" /><link rel="icon" type="image/x-icon" sizes="256x256" href="https://clickette.net/assets-homepage/img/favicon.ico" /></head>'
+                '<link rel="manifest" href="/manifest.json" /><link rel="icon" type="image/x-icon" sizes="256x256" href="https://clickette.org/assets-homepage/img/favicon.ico" /></head>'
             );
             const modifiedText2 = modifiedText.replaceAll(
-                "dash.clickette.net",
-                "clickette.net"
+                "dash.clickette.org",
+                "clickette.org"
             );
             const modifiedText3 = modifiedText2.replaceAll(
                 "dashboard-internal.",
@@ -110,12 +110,12 @@ export default {
                 "homepage-internal.",
                 ""
             );
-            const logoJs = `document.addEventListener("DOMContentLoaded",function(){let e=document.createElement("div");e.style.cssText="z-index:9999!important;width:100vw;height:50px;background-color:yellow;position:fixed;bottom:0;";let t=document.createElement("span");t.style.cssText="left:50%;color:black;position:absolute;top:50%;transform:translate(-50%,-50%);width:100vw;text-align:center;",t.innerHTML="<b>WARNING!</b> We are in the process of wiping possibly malicious files due to multiple malware reports by AdGuard, Fortinet and others. <i><b>Please email contact@clickette.net to retrieve falsely deleted files.</b></i>",e.appendChild(t),document.body.insertBefore(e,document.body.firstChild)});const style=document.documentElement.style;function getLogoSrc(){let e=style.getPropertyValue("color-scheme").trim();return"dark"===e?"https://clickette.net/assets-homepage/img/wordmark-white.svg":"https://clickette.net/assets-homepage/img/wordmark-black.svg"}function setTargetInnerHTML(){let e=document.querySelector("#__next > div > header > div > h1");if(e&&"Clickette"===e.innerHTML.trim()){let t=getLogoSrc();return e.innerHTML=\`<img id="logo" src="\${t}" height="30" style="margin-top:-8px;">\`,e}return null}function updateLogo(){let e=document.getElementById("logo");e&&(e.src=getLogoSrc())}const observer=new MutationObserver(e=>{let t=document.querySelector("#__next > div > header > div > h1");t&&"Clickette"===t.innerHTML.trim()&&setTargetInnerHTML()});let targetElement=setTargetInnerHTML();const config={childList:!0,subtree:!0};observer.observe(document,config);const targetObserver=new MutationObserver(e=>{for(let t of e)"childList"===t.type&&(targetElement=setTargetInnerHTML(),targetObserver.observe(targetElement,{childList:!0,subtree:!0}))});targetObserver.observe(document,{childList:!0,subtree:!0});const themeObserver=new MutationObserver(e=>{for(let t of e)"style"===t.attributeName&&updateLogo()});themeObserver.observe(document.documentElement,{attributes:!0,attributeFilter:["style"]}),updateLogo();`;
+            const logoJs = `document.addEventListener("DOMContentLoaded",function(){let e=document.createElement("div");e.style.cssText="z-index:9999!important;width:100vw;height:50px;background-color:yellow;position:fixed;bottom:0;";let t=document.createElement("span");t.style.cssText="left:50%;color:black;position:absolute;top:50%;transform:translate(-50%,-50%);width:100vw;text-align:center;",t.innerHTML="<b>WARNING!</b> We are in the process of wiping possibly malicious files due to multiple malware reports by AdGuard, Fortinet and others. <i><b>Please email contact@clickette.org to retrieve falsely deleted files.</b></i>",e.appendChild(t),document.body.insertBefore(e,document.body.firstChild)});const style=document.documentElement.style;function getLogoSrc(){let e=style.getPropertyValue("color-scheme").trim();return"dark"===e?"https://clickette.org/assets-homepage/img/wordmark-white.svg":"https://clickette.org/assets-homepage/img/wordmark-black.svg"}function setTargetInnerHTML(){let e=document.querySelector("#__next > div > header > div > h1");if(e&&"Clickette"===e.innerHTML.trim()){let t=getLogoSrc();return e.innerHTML=\`<img id="logo" src="\${t}" height="30" style="margin-top:-8px;">\`,e}return null}function updateLogo(){let e=document.getElementById("logo");e&&(e.src=getLogoSrc())}const observer=new MutationObserver(e=>{let t=document.querySelector("#__next > div > header > div > h1");t&&"Clickette"===t.innerHTML.trim()&&setTargetInnerHTML()});let targetElement=setTargetInnerHTML();const config={childList:!0,subtree:!0};observer.observe(document,config);const targetObserver=new MutationObserver(e=>{for(let t of e)"childList"===t.type&&(targetElement=setTargetInnerHTML(),targetObserver.observe(targetElement,{childList:!0,subtree:!0}))});targetObserver.observe(document,{childList:!0,subtree:!0});const themeObserver=new MutationObserver(e=>{for(let t of e)"style"===t.attributeName&&updateLogo()});themeObserver.observe(document.documentElement,{attributes:!0,attributeFilter:["style"]}),updateLogo();`;
             const modifiedText5 = modifiedText4.replace(
                 "</body>",
                 "</body><script>" +
                     logoJs +
-                    '</script><script src="https://clickette.instatus.com/en/021b5f0f/widget/script.js"></script><script async defer src="https://s.clickette.net/latest.js"></script> <noscript><img src="https://s.clickette.net/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>'
+                    '</script><script src="https://clickette.instatus.com/en/021b5f0f/widget/script.js"></script><script async defer src="https://s.clickette.org/latest.js"></script> <noscript><img src="https://s.clickette.org/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>'
             );
             return new Response(modifiedText5, {
                 status: response.status,

@@ -11,19 +11,19 @@
             href="/assets-homepage/img/favicon.ico"
         />
         <title>Clickette</title>
-        <link rel="canonical" href="https://clickette.net/" />
-        <meta property="og:url" content="https://clickette.net/" />
+        <link rel="canonical" href="https://clickette.org/" />
+        <meta property="og:url" content="https://clickette.org/" />
         <meta
             name="twitter:description"
             content="The next generation file storage - Packed with features and a great dashboard. What more could you want?"
         />
         <meta
             name="twitter:image"
-            content="https://clickette.net/assets-homepage/img/clickette-portrait.png"
+            content="https://clickette.org/assets-homepage/img/clickette-portrait.png"
         />
         <meta
             property="og:image"
-            content="https://clickette.net/assets-homepage/img/clickette-front.png"
+            content="https://clickette.org/assets-homepage/img/clickette-front.png"
         />
         <meta
             name="description"
@@ -36,7 +36,7 @@
                 "@context": "http://schema.org",
                 "@type": "WebSite",
                 "name": "Clickette",
-                "url": "https://clickette.net"
+                "url": "https://clickette.org"
             }
         </script>
         <style>
@@ -48,16 +48,16 @@
     </head>
     <body class="bg-black">
         <!-- header -->
-        <div class="justify-center w-full mx-auto bg-black">
+        <div class="justify-center bg-black mx-auto w-full">
             <div
                 x-data="{ open: false }"
-                class="flex flex-col w-full px-8 py-2 mx-auto md:px-12 md:items-center md:justify-between md:flex-row lg:px-32 max-w-7xl"
+                class="flex md:flex-row flex-col md:justify-between md:items-center mx-auto px-8 md:px-12 lg:px-32 py-2 w-full max-w-7xl"
             >
                 <div
-                    class="flex flex-row items-center justify-between text-white"
+                    class="flex flex-row justify-between items-center text-white"
                 >
                     <a
-                        class="inline-flex items-center gap-6 text-xl font-bold tracking-tight text-white"
+                        class="inline-flex items-center gap-6 font-bold text-white text-xl tracking-tight"
                         href="/"
                     >
                         <img
@@ -66,7 +66,7 @@
                         />
                     </a>
                     <button
-                        class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
+                        class="md:hidden focus:shadow-outline rounded-lg focus:outline-none"
                         @click="open = !open"
                     >
                         <svg
@@ -96,10 +96,10 @@
                 </div>
                 <nav
                     :class="{'flex': open, 'hidden': !open}"
-                    class="flex-col items-center flex-grow hidden gap-6 p-4 px-5 text-sm font-medium text-stone-400 md:px-0 md:flex md:justify-start md:flex-row lg:p-0 md:mt-0"
+                    class="md:flex md:flex-row flex-col flex-grow md:justify-start items-center gap-6 hidden md:mt-0 px-5 md:px-0 p-4 lg:p-0 font-medium text-sm text-stone-400"
                 >
                     <a
-                        class="hover:text-white transition-all focus:outline-none text-stone-400 md:ml-auto"
+                        class="hover:text-white transition-all focus:outline-none md:ml-auto text-stone-400"
                         href="/terms"
                         >Terms of Service
                     </a>
@@ -109,7 +109,7 @@
                         >Privacy Policy
                     </a>
                     <a
-                        class="inline-flex items-center justify-center w-full h-8 gap-6 px-5 py-3 text-xs font-medium text-white duration-200 bg-stone-900 rounded-lg md:w-auto hover:bg-stone-700 focus:ring-2 focus:ring-offset-2 focus:ring-black"
+                        class="inline-flex justify-center items-center gap-6 bg-stone-900 hover:bg-stone-700 px-5 py-3 rounded-lg focus:ring-2 focus:ring-black focus:ring-offset-2 w-full md:w-auto h-8 font-medium text-white text-xs duration-200"
                         href="/dashboard"
                         role="button"
                     >
@@ -118,21 +118,21 @@
                 </nav>
             </div>
         </div>
-        <div class="justify-center w-full mx-auto bg-stone-100 max-sm:hidden">
+        <div class="justify-center max-sm:hidden bg-stone-100 mx-auto w-full">
             <div
-                class="flex items-center justify-center h-12 text-white bg-stone-900"
+                class="flex justify-center items-center bg-stone-900 h-12 text-white"
             >
-                <div class="flex items-center justify-center gap-4">
-                    <div class="text-xs font-medium">
+                <div class="flex justify-center items-center gap-4">
+                    <div class="font-medium text-xs">
                         <span
                             >Glyphin is out now - Your Discord servers swiss
                             army knife</span
                         >
                     </div>
-                    <div class="hidden w-px h-6 sm:block bg-stone-600"></div>
+                    <div class="sm:block hidden bg-stone-600 w-px h-6"></div>
                     <div>
                         <a
-                            class="text-xs flex font-semibold items-center justify-center px-4 py-2 rounded-lg transition-all h-8 text-white bg-gradient-to-b from-white/[.105] hover:to-white/[.25] ring-1 ring-inset ring-white/20 to-white/[.15]"
+                            class="flex justify-center items-center bg-gradient-to-b from-white/[.105] to-white/[.15] hover:to-white/[.25] px-4 py-2 rounded-lg ring-1 ring-white/20 ring-inset h-8 font-semibold text-white text-xs transition-all"
                             href="https://glyphin.hamium.xyz"
                             >Learn more →</a
                         >
@@ -143,7 +143,7 @@
         <!-- content -->
         <section>
             <div
-                class="px-8 py-24 mx-auto md:px-12 lg:px-32 max-w-7xl bg-black"
+                class="bg-black mx-auto px-8 md:px-12 lg:px-32 py-24 max-w-7xl"
                 style="
                     background-image: radial-gradient(
                         circle farthest-side at center top,
@@ -155,23 +155,23 @@
             >
                 <div class="text-center">
                     <h1
-                        class="text-4xl font-bold tracking-tighter text-white lg:text-5xl text-balance"
+                        class="font-bold text-4xl text-balance text-white lg:text-5xl tracking-tighter"
                     >
                         The most private<br />
                         file management solution
                     </h1>
                     <p
-                        class="w-1/2 mx-auto mt-4 text-base font-medium text-stone-400 text-balance"
+                        class="mx-auto mt-4 w-1/2 font-medium text-balance text-base text-stone-400"
                     >
                         A streamlined solution to your file management needs,
                         with a beautiful dashboard. Easy to manage, share and
                         use.
                     </p>
                     <div
-                        class="flex flex-col items-center justify-center gap-2 mx-auto mt-8 md:flex-row"
+                        class="flex md:flex-row flex-col justify-center items-center gap-2 mx-auto mt-8"
                     >
                         <button
-                            class="hovergradientp border-2 inline-flex items-center justify-center w-full h-12 gap-6 px-5 py-3 font-medium text-white duration-300 bg-transparent md:w-auto rounded-xl focus:ring-2 focus:ring-offset-2"
+                            class="inline-flex justify-center items-center gap-6 border-2 bg-transparent px-5 py-3 rounded-xl focus:ring-2 focus:ring-offset-2 w-full md:w-auto h-12 font-medium text-white duration-300 hovergradientp"
                             style="
                                 border-color: hsla(23, 100%, 50%, 50%);
                                 box-shadow: inset -1px 45px 20px -40px
@@ -183,7 +183,7 @@
                             <a href="/dashboard">Get Started</a>
                         </button>
                         <button
-                            class="hovergradients border-2 inline-flex items-center justify-center w-full h-12 gap-6 px-5 py-3 font-medium text-white duration-300 md:w-auto rounded-xl focus:ring-2 focus:ring-offset-2"
+                            class="inline-flex justify-center items-center gap-6 border-2 px-5 py-3 rounded-xl focus:ring-2 focus:ring-offset-2 w-full md:w-auto h-12 font-medium text-white duration-300 hovergradients"
                             style="
                                 border-color: hsla(0, 0%, 79%, 50%);
                                 box-shadow: inset -1px 45px 20px -40px
@@ -200,15 +200,15 @@
                         </button>
                     </div>
                     <div
-                        class="relative h-full p-2 mt-24 overflow-hidden rounded-2xl"
+                        class="relative mt-24 p-2 rounded-2xl h-full overflow-hidden"
                     >
                         <img
                             src="/assets-homepage/img/screenshot.png"
-                            class="object-cover h-full shadow-2xl rounded-2xl"
+                            class="shadow-2xl rounded-2xl h-full object-cover"
                         />
                         <div
                             name="gradient"
-                            class="bg-black h-80 -mt-48 w-full ml-auto mr-auto"
+                            class="bg-black -mt-48 mr-auto ml-auto w-full h-80"
                             style="
                                 background-image: radial-gradient(
                                     ellipse farthest-side at center,
@@ -223,27 +223,27 @@
         </section>
 
         <section>
-            <div class="px-8 py-24 mx-auto md:px-12 lg:px-32 max-w-7xl -mt-48">
+            <div class="mx-auto -mt-48 px-8 md:px-12 lg:px-32 py-24 max-w-7xl">
                 <div class="text-center">
                     <h1
-                        class="text-4xl font-bold tracking-tighter text-white lg:text-5xl text-balance"
+                        class="font-bold text-4xl text-balance text-white lg:text-5xl tracking-tighter"
                     >
                         Exactly what you need,<br />when you need it.
                     </h1>
                     <p
-                        class="mt-4 text-base font-medium text-white text-balance"
+                        class="mt-4 font-medium text-balance text-base text-white"
                     >
                         A beautiful dashboard to manage your files, share them
                         with others and keep them safe.
                     </p>
 
                     <div
-                        class="grid grid-cols-2 mt-12 text-center gap-x-6 gap-y-12 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16"
+                        class="gap-x-6 gap-y-12 lg:gap-x-8 lg:gap-y-16 grid grid-cols-2 lg:grid-cols-4 mt-12 lg:mt-16 text-center"
                     >
                         <div>
                             <div>
                                 <span
-                                    class="flex items-center justify-center mx-auto rounded-full size-12 bg-stone-900"
+                                    class="flex justify-center items-center bg-stone-900 mx-auto rounded-full size-12"
                                     ><svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         class="icon icon-tabler icon-tabler-link-plus"
@@ -286,7 +286,7 @@
                         <div>
                             <div>
                                 <span
-                                    class="flex items-center justify-center mx-auto rounded-full size-12 bg-stone-900"
+                                    class="flex justify-center items-center bg-stone-900 mx-auto rounded-full size-12"
                                     ><svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         class="icon icon-tabler icon-tabler-lock"
@@ -326,7 +326,7 @@
                         <div>
                             <div>
                                 <span
-                                    class="flex items-center justify-center mx-auto rounded-full size-12 bg-stone-900"
+                                    class="flex justify-center items-center bg-stone-900 mx-auto rounded-full size-12"
                                     ><svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         class="icon icon-tabler icon-tabler-folder-open"
@@ -362,7 +362,7 @@
                         <div>
                             <div>
                                 <span
-                                    class="flex items-center justify-center mx-auto rounded-full size-12 bg-stone-900"
+                                    class="flex justify-center items-center bg-stone-900 mx-auto rounded-full size-12"
                                     ><svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         class="icon icon-tabler icon-tabler-bolt"
@@ -393,7 +393,7 @@
                                 <p class="mt-2 text-sm text-white">
                                     Built on top of Zipline, the most secure
                                     file management solution.
-                                    <span class="text-stone-400 font-semibold"
+                                    <span class="font-semibold text-stone-400"
                                         >Custom software coming soon</span
                                     >
                                 </p>
@@ -405,61 +405,61 @@
         </section>
 
         <section>
-            <div class="px-8 py-24 mx-auto md:px-12 lg:px-32 max-w-7xl">
+            <div class="mx-auto px-8 md:px-12 lg:px-32 py-24 max-w-7xl">
                 <div>
-                    <p class="text-4xl font-bold tracking-tighter text-white">
+                    <p class="font-bold text-4xl text-white tracking-tighter">
                         Frequently Asked Questions
                     </p>
-                    <p class="mt-4 text-base font-medium text-stone-400">
+                    <p class="mt-4 font-medium text-base text-stone-400">
                         Answers to commonly asked questions about our platform.
                     </p>
                 </div>
-                <dl class="grid gap-12 mt-12 lg:grid-cols-2">
+                <dl class="gap-12 grid lg:grid-cols-2 mt-12">
                     <div>
-                        <dt class="text-lg font-medium text-white">
+                        <dt class="font-medium text-lg text-white">
                             What is Clickette?
                         </dt>
-                        <dd class="mt-2 text-base font-medium text-stone-400">
+                        <dd class="mt-2 font-medium text-base text-stone-400">
                             Clickette is a cutting-edge file storage platform,
                             akin to GoFile, providing seamless solutions for
                             storing and managing your files effortlessly.
                         </dd>
                     </div>
                     <div>
-                        <dt class="text-lg font-medium text-white">
+                        <dt class="font-medium text-lg text-white">
                             How much does Clickette cost?
                         </dt>
-                        <dd class="mt-2 text-base font-medium text-stone-400">
+                        <dd class="mt-2 font-medium text-base text-stone-400">
                             Clickette is entirely free to use. We believe in
                             providing a robust content storage and distribution
                             platform without any cost barriers.
                         </dd>
                     </div>
                     <div>
-                        <dt class="text-lg font-medium text-white">
+                        <dt class="font-medium text-lg text-white">
                             What's the file size limit?
                         </dt>
-                        <dd class="mt-2 text-base font-medium text-stone-400">
+                        <dd class="mt-2 font-medium text-base text-stone-400">
                             Clickette boasts an unlimited file size limit,
                             ensuring you can store and share files of any size
                             without constraints.
                         </dd>
                     </div>
                     <div>
-                        <dt class="text-lg font-medium text-white">
+                        <dt class="font-medium text-lg text-white">
                             Does Clickette respect my privacy?
                         </dt>
-                        <dd class="mt-2 text-base font-medium text-stone-400">
+                        <dd class="mt-2 font-medium text-base text-stone-400">
                             Absolutely. At Clickette, we prioritize your privacy
                             and security. Your data is kept confidential and is
                             never shared with third parties.
                         </dd>
                     </div>
                     <div>
-                        <dt class="text-lg font-medium text-white">
+                        <dt class="font-medium text-lg text-white">
                             What types of files can I upload?
                         </dt>
-                        <dd class="mt-2 text-base font-medium text-stone-400">
+                        <dd class="mt-2 font-medium text-base text-stone-400">
                             You're welcome to upload any file type as long as it
                             adheres to legal standards and doesn't violate
                             Clickette's terms of service.
@@ -470,28 +470,28 @@
         </section>
 
         <section class="bg-transparent lg:h-1/2">
-            <div class="px-8 py-24 mx-auto md:px-12 lg:px-32 max-w-7xl lg:flex">
+            <div class="lg:flex mx-auto px-8 md:px-12 lg:px-32 py-24 max-w-7xl">
                 <div class="lg:w-1/2">
                     <div class="top-0 -pt-8 pb-16">
                         <div>
-                            <div class="lg:pr-24 md:pr-12">
+                            <div class="md:pr-12 lg:pr-24">
                                 <div>
                                     <h1
-                                        class="text-4xl font-bold tracking-tighter text-white"
+                                        class="font-bold text-4xl text-white tracking-tighter"
                                     >
                                         What are you even waiting for?
                                     </h1>
                                     <p
-                                        class="mt-4 text-base font-medium text-stone-400 text-balance"
+                                        class="mt-4 font-medium text-balance text-base text-stone-400"
                                     >
                                         Get started with Clickette today and
                                         experience the future of file storage.
                                     </p>
                                     <div
-                                        class="flex flex-col items-center gap-2 mx-auto mt-8 md:flex-row"
+                                        class="flex md:flex-row flex-col items-center gap-2 mx-auto mt-8"
                                     >
                                         <button
-                                            class="hovergradientp border-2 inline-flex items-center justify-center w-full h-12 gap-3 px-5 py-3 font-medium text-white duration-200 md:w-auto rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-black"
+                                            class="inline-flex justify-center items-center gap-3 border-2 px-5 py-3 rounded-xl focus:ring-2 focus:ring-black focus:ring-offset-2 w-full md:w-auto h-12 font-medium text-white duration-200 hovergradientp"
                                             aria-label="Primary action"
                                             style="
                                                 border-color: hsla(
@@ -510,7 +510,7 @@
                                             </a>
                                         </button>
                                         <button
-                                            class="hovergradients border-2 inline-flex items-center justify-center w-full h-12 gap-3 px-5 py-3 font-medium duration-200 md:w-auto rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                                            class="inline-flex justify-center items-center gap-3 border-2 px-5 py-3 rounded-xl focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 w-full md:w-auto h-12 font-medium duration-200 hovergradients"
                                             aria-label="Secondary action"
                                             style="
                                                 border-color: hsla(
@@ -537,21 +537,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="lg:w-1/2 hidden lg:block">
+                <div class="lg:block hidden lg:w-1/2">
                     <div class="flex-shrink-0">
                         <div>
                             <ul
-                                class="grid grid-cols-1 gap-12 mt-6 text-base font-medium text-gray-500 list-none lg:mt-0 text-balance"
+                                class="gap-12 grid grid-cols-1 mt-6 lg:mt-0 font-medium text-balance text-base text-gray-500 list-none"
                                 role="list"
                             >
                                 <img
                                     src="/assets-homepage/img/clickette-front.png"
-                                    class="object-cover h-80 w-full shadow-2xl rounded-2xl"
+                                    class="shadow-2xl rounded-2xl w-full h-80 object-cover"
                                 />
                             </ul>
                             <div
                                 name="gradient"
-                                class="bg-black h-80 -mt-48 w-full ml-auto mr-auto"
+                                class="bg-black -mt-48 mr-auto ml-auto w-full h-80"
                                 style="
                                     background-image: radial-gradient(
                                         ellipse farthest-side at center,
@@ -569,7 +569,7 @@
         <!-- footer -->
         <footer>
             <div
-                class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-full -m-24"
+                class="-m-24 mx-auto px-8 md:px-12 lg:px-32 py-12 max-w-full"
                 style="
                     background: rgb(255, 98, 0);
                     background: linear-gradient(
@@ -579,24 +579,24 @@
                     );
                 "
             >
-                <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="xl:gap-8 xl:grid xl:grid-cols-3">
                     <div>
                         <img
                             src="/assets-homepage/img/wordmark-white.svg"
                             style="height: 23px"
                         />
                         <p
-                            class="mt-2 text-sm font-medium text-stone-400 lg:w-4/5"
+                            class="mt-2 lg:w-4/5 font-medium text-sm text-stone-400"
                         >
                             The best file management solution.
                         </p>
                     </div>
                     <div
-                        class="grid grid-cols-2 gap-8 mt-12 text-sm font-medium text-stone-400 lg:grid-cols-3 lg:mt-0 xl:col-span-2"
+                        class="gap-8 grid grid-cols-2 lg:grid-cols-3 xl:col-span-2 mt-12 lg:mt-0 font-medium text-sm text-stone-400"
                     >
                         <div>
                             <h3 class="text-base text-white">Information</h3>
-                            <ul role="list" class="mt-4 space-y-2">
+                            <ul role="list" class="space-y-2 mt-4">
                                 <li>
                                     <a
                                         href="/terms"
@@ -628,7 +628,7 @@
                         </div>
                         <div>
                             <h3 class="text-base text-white">Services</h3>
-                            <ul role="list" class="mt-4 space-y-2">
+                            <ul role="list" class="space-y-2 mt-4">
                                 <li>
                                     <a
                                         href="/"
@@ -652,14 +652,14 @@
                     </div>
                 </div>
                 <div
-                    class="flex flex-col pt-12 md:flex-row md:items-center md:justify-between"
+                    class="flex md:flex-row flex-col md:justify-between md:items-center pt-12"
                     x-data="{ year: new Date().getFullYear() }"
                 >
-                    <span class="text-sm font-medium text-stone-400">
+                    <span class="font-medium text-sm text-stone-400">
                         Copyright © <span x-text="year">2024</span>
                         <a
                             aria-label="Team Clickette"
-                            href="https://team.clickette.net"
+                            href="https://team.clickette.org"
                             class="mx-2 text-blue-400 hover:text-stone-400"
                             >Team Clickette</a
                         >
