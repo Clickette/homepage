@@ -5,7 +5,7 @@ const TOAST_HTML = `
         <span>Clickette (Zipline) is currently in read-only mode. You won't be able to upload files.</span>
         <a href="https://clickette.instatus.com/cm9cemvfh00e19d240a7abbjo" class="underline" style="color: #80cfff;">Learn More</a>
         <br>
-        <span>Follow our <a href="https://bsky.app/profile/did:plc:ttztqgxnvltmt4cyemuhg437">Bluesky</a> for updates on Vault.</span>
+        <span>Follow our <a href="https://bsky.app/profile/did:plc:ttztqgxnvltmt4cyemuhg437" class="underline" style="color: #80cfff;">Bluesky</a> for updates on Vault.</span>
     </div>
     <button id="close-toast" style="margin-top: 10px; border: none; background-color: #555; color: #fff; cursor: pointer; font-size: 12px; padding: 5px 10px; border-radius: 3px;">OK</button>
 </div>
