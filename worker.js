@@ -122,7 +122,7 @@ export default {
                 TOAST_HTML +
                 "</body><script>" +
                 logoJs +
-                '</script><script src="https://clickette.instatus.com/en/021b5f0f/widget/script.js"></script><script async defer src="https://s.clickette.org/latest.js"></script> <noscript><img src="https://s.clickette.org/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>'
+                '</script><!--<script src="https://clickette.instatus.com/en/021b5f0f/widget/script.js"></script>--><script async defer src="https://s.clickette.org/latest.js"></script> <noscript><img src="https://s.clickette.org/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>'
             );
 
             // Create new headers for the modified response, copying original ones
