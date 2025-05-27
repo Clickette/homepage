@@ -1,242 +1,222 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/assets-homepage/css/style.css" />
-        <link
-            rel="icon"
-            type="image/x-icon"
-            sizes="256x256"
-            href="/assets-homepage/img/favicon.ico"
-        />
-        <title>Clickette - Privacy Policy</title>
-        <link rel="canonical" href="https://clickette.org/" />
-        <meta property="og:url" content="https://clickette.org/" />
-        <meta
-            name="twitter:description"
-            content="The next generation file storage - Packed with features and a great dashboard. What more could you want?"
-        />
-        <meta
-            name="twitter:image"
-            content="https://clickette.org/assets-homepage/img/clickette-portrait.png"
-        />
-        <meta
-            property="og:image"
-            content="https://clickette.org/assets-homepage/img/clickette-front.png"
-        />
-        <meta
-            name="description"
-            content="The next generation file storage - Packed with features and a great dashboard. What more could you want?"
-        />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Clickette" />
-        <script type="application/ld+json">
-            {
-                "@context": "http://schema.org",
-                "@type": "WebSite",
-                "name": "Clickette",
-                "url": "https://clickette.org"
-            }
-        </script>
-        <style>
-            :root {
-                color-scheme: dark;
-            }
-        </style>
-        <link rel="manifest" href="/manifest.json" />
-    </head>
-    <body class="bg-black">
-        <div class="justify-center bg-black mx-auto w-full">
-            <div
-                x-data="{ open: false }"
-                class="flex md:flex-row flex-col md:justify-between md:items-center mx-auto px-8 md:px-12 lg:px-32 py-2 w-full max-w-7xl"
-            >
-                <div
-                    class="flex flex-row justify-between items-center text-white"
-                >
-                    <a
-                        class="inline-flex items-center gap-6 font-bold text-white text-xl tracking-tight"
-                        href="/"
-                    >
-                        <img
-                            src="/assets-homepage/img/wordmark-white.svg"
-                            style="height: 23px"
-                        />
-                    </a>
-                    <button
-                        class="md:hidden focus:shadow-outline rounded-lg focus:outline-none"
-                        @click="open = !open"
-                    >
-                        <svg
-                            class="w-6 h-6"
-                            stroke="#fff"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                :class="{'hidden': open, 'inline-flex': !open }"
-                                class="inline-flex"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16"
-                            ></path>
-                            <path
-                                :class="{'hidden': !open, 'inline-flex': open }"
-                                class="hidden"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12"
-                            ></path>
-                        </svg>
-                    </button>
-                </div>
-                <nav
-                    :class="{'flex': open, 'hidden': !open}"
-                    class="md:flex md:flex-row flex-col flex-grow md:justify-start items-center gap-6 hidden md:mt-0 px-5 md:px-0 p-4 lg:p-0 md:pb-0 font-medium text-sm text-stone-400"
-                >
-                    <a
-                        class="hover:text-white transition-all focus:outline-none md:ml-auto text-stone-400"
-                        href="/terms"
-                        >Terms of Service
-                    </a>
-                    <a
-                        class="hover:text-white transition-all focus:outline-none text-stone-400"
-                        href="/privacy"
-                        >Privacy Policy
-                    </a>
-                    <a
-                        class="inline-flex justify-center items-center gap-6 bg-stone-900 hover:bg-stone-700 px-5 py-3 rounded-lg focus:ring-2 focus:ring-black focus:ring-offset-2 w-full md:w-auto h-8 font-medium text-white text-xs duration-200"
-                        href="/dashboard"
-                        role="button"
-                    >
-                        Dashboard
-                    </a>
-                </nav>
-            </div>
-        </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/assets-homepage/css/style.css" />
+		<link
+			rel="icon"
+			type="image/x-icon"
+			sizes="256x256"
+			href="/assets-homepage/img/favicon.ico"
+		/>
+		<title>Clickette - Privacy Policy</title>
+		<link rel="canonical" href="https://clickette.org/" />
+		<meta property="og:url" content="https://clickette.org/" />
+		<meta
+			name="twitter:description"
+			content="The next generation file storage - Packed with features and a great dashboard. What more could you want?"
+		/>
+		<meta
+			name="twitter:image"
+			content="https://clickette.org/assets-homepage/img/clickette-portrait.png"
+		/>
+		<meta
+			property="og:image"
+			content="https://clickette.org/assets-homepage/img/clickette-front.png"
+		/>
+		<meta
+			name="description"
+			content="The next generation file storage - Packed with features and a great dashboard. What more could you want?"
+		/>
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="Clickette" />
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "WebSite",
+				"name": "Clickette",
+				"url": "https://clickette.org"
+			}
+		</script>
+		<style>
+			:root {
+				color-scheme: dark;
+			}
+		</style>
+		<link rel="manifest" href="/manifest.json" />
+	</head>
+	<body class="bg-black">
+		<div class="justify-center bg-black mx-auto w-full">
+			<div
+				x-data="{ open: false }"
+				class="flex md:flex-row flex-col md:justify-between md:items-center mx-auto px-8 md:px-12 lg:px-32 py-2 w-full max-w-7xl"
+			>
+				<div class="flex flex-row justify-between items-center text-white">
+					<a
+						class="inline-flex items-center gap-6 font-bold text-white text-xl tracking-tight"
+						href="/"
+					>
+						<img
+							src="/assets-homepage/img/wordmark-white.svg"
+							style="height: 23px"
+						/>
+					</a>
+					<button
+						class="md:hidden focus:shadow-outline rounded-lg focus:outline-none"
+						@click="open = !open"
+					>
+						<svg class="w-6 h-6" stroke="#fff" fill="none" viewBox="0 0 24 24">
+							<path
+								:class="{'hidden': open, 'inline-flex': !open }"
+								class="inline-flex"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M4 6h16M4 12h16M4 18h16"
+							></path>
+							<path
+								:class="{'hidden': !open, 'inline-flex': open }"
+								class="hidden"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M6 18L18 6M6 6l12 12"
+							></path>
+						</svg>
+					</button>
+				</div>
+				<nav
+					:class="{'flex': open, 'hidden': !open}"
+					class="md:flex md:flex-row flex-col flex-grow md:justify-start items-center gap-6 hidden md:mt-0 px-5 md:px-0 p-4 lg:p-0 md:pb-0 font-medium text-sm text-stone-400"
+				>
+					<a
+						class="hover:text-white transition-all focus:outline-none md:ml-auto text-stone-400"
+						href="/terms"
+						>Terms of Service
+					</a>
+					<a
+						class="hover:text-white transition-all focus:outline-none text-stone-400"
+						href="/privacy"
+						>Privacy Policy
+					</a>
+					<a
+						class="inline-flex justify-center items-center gap-6 bg-stone-900 hover:bg-stone-700 px-5 py-3 rounded-lg focus:ring-2 focus:ring-black focus:ring-offset-2 w-full md:w-auto h-8 font-medium text-white text-xs duration-200"
+						href="/dashboard"
+						role="button"
+					>
+						Dashboard
+					</a>
+				</nav>
+			</div>
+		</div>
 
-        <section>
-            <div class="mt-5 p-6">
-                <div class="mx-auto w-3/4">
-                    <h1 class="mb-4 font-bold text-3xl text-white">
-                        Privacy Policy
-                    </h1>
-                    <p class="text-white">
-                        Update Summary: Remove reference to hamhim.<br /><br />Last
-                        Updated: 2025-05-07<br /><br /><b>Introduction</b
-                        ><br /><br />At Clickette, we understand the importance
-                        of safeguarding your online privacy. This privacy policy
-                        has been crafted to provide you with insights into the
-                        information we gather, how we utilize it, and the
-                        measures we take to protect it. This policy pertains to
-                        all services offered by Clickette.<br /><br /><b
-                            >Information Collected</b
-                        ><br /><br />We respect your privacy and do not collect
-                        any personal information from our users. We neither
-                        track users nor store their IP address.<br /><br /><b
-                            >Public Stats Page</b
-                        ><br /><br />Clickette maintains a public stats page
-                        displaying aggregated information such as the number and
-                        types of files uploaded, including usernames of
-                        individuals who upload the most files. While usernames
-                        are displayed, we do not disclose any additional
-                        personally identifiable details. The intent is to
-                        provide transparency about usage patterns on Clickette
-                        without compromising user privacy.<br /><br /><b
-                            >File Privacy</b
-                        ><br /><br />Uploaded files and their contents are not
-                        publicly accessible, and only authorized users with
-                        specific access privileges can view or manage specific
-                        file information. Administrators, however, do not have
-                        the ability to view the contents of the uploaded
-                        files.<br /><br /><b>Services Integrated in Clickette</b
-                        ><br /><br />Certain integrated services have their own
-                        privacy policies. Clickette employs Cloudflare for DNS
-                        management, monitoring the number of visits in each
-                        country, and ensuring site protection.<br /><br /><b
-                            >Use of Third-Party Authentication Data</b
-                        ><br /><br />Clickette allows users to create accounts
-                        and link their accounts using third-party services such
-                        as Google, Discord, and GitHub. We only use the
-                        information provided by these services for the purpose
-                        of account creation and linking. We do not collect,
-                        store, or share any additional information from these
-                        services.<br /><br /><b>Changes to Privacy Policy</b
-                        ><br /><br />We may periodically update this privacy
-                        policy. Any modifications will be communicated by
-                        posting the revised policy on the Clickette website on
-                        this page.<br /><br /><b>Contact Information</b
-                        ><br /><br />For additional privacy policy inquiries or
-                        comments, please contact us at contact@clickette.org.
-                    </p>
-                </div>
-            </div>
-        </section>
+		<section>
+			<div class="mt-5 p-6">
+				<div class="mx-auto w-3/4">
+					<h1 class="mb-4 font-bold text-3xl text-white">Privacy Policy</h1>
+					<p class="text-white">
+						Update Summary: Correct mistake in access policy<br /><br />Last
+						Updated: 2025-05-27<br /><br /><b>Introduction</b><br /><br />At
+						Clickette, we understand the importance of safeguarding your online
+						privacy. This privacy policy has been crafted to provide you with
+						insights into the information we gather, how we utilize it, and the
+						measures we take to protect it. This policy pertains to all services
+						offered by Clickette.<br /><br /><b>Information Collected</b
+						><br /><br />We respect your privacy and do not collect any personal
+						information from our users. We neither track users nor store their
+						IP address.<br /><br /><b>Public Stats Page</b><br /><br />Clickette
+						maintains a public stats page displaying aggregated information such
+						as the number and types of files uploaded, including usernames of
+						individuals who upload the most files. While usernames are
+						displayed, we do not disclose any additional personally identifiable
+						details. The intent is to provide transparency about usage patterns
+						on Clickette without compromising user privacy.<br /><br /><b
+							>File Privacy</b
+						><br /><br />Uploaded files' links are not publicly shared by
+						default. Authorized users with specific access privileges can view
+						or manage files for identifying and removing rule-breaking
+						content.<br /><br /><b>Services Integrated in Clickette</b
+						><br /><br />Certain integrated services have their own privacy
+						policies. Clickette employs Cloudflare for DNS management,
+						monitoring the number of visits in each country, and ensuring site
+						protection.<br /><br /><b>Use of Third-Party Authentication Data</b
+						><br /><br />Clickette allows users to create accounts and link
+						their accounts using third-party services such as Google, Discord,
+						and GitHub. We only use the information provided by these services
+						for the purpose of account creation and linking. We do not collect,
+						store, or share any additional information from these services.<br /><br /><b
+							>Changes to Privacy Policy</b
+						><br /><br />We may periodically update this privacy policy. Any
+						modifications will be communicated by posting the revised policy on
+						the Clickette website on this page.<br /><br /><b
+							>Contact Information</b
+						><br /><br />For additional privacy policy inquiries or comments,
+						please contact us at contact@clickette.org.
+					</p>
+				</div>
+			</div>
+		</section>
 
-        <footer>
-            <div
-                class="mx-auto px-8 md:px-12 lg:px-32 py-12 max-w-full"
-                style="
-                    background: rgb(255, 98, 0);
-                    background: linear-gradient(
-                        0deg,
-                        rgba(255, 98, 0, 0.132) 0%,
-                        rgba(0, 0, 0, 1) 100%
-                    );
-                "
-            >
-                <div class="xl:gap-8 xl:grid xl:grid-cols-3">
-                    <div>
-                        <img
-                            src="/assets-homepage/img/wordmark-white.svg"
-                            style="height: 23px"
-                        />
-                        <p
-                            class="mt-2 lg:w-4/5 font-medium text-sm text-stone-400"
-                        >
-                            The best file management solution.
-                        </p>
-                    </div>
-                    <div
-                        class="gap-8 grid grid-cols-2 lg:grid-cols-3 xl:col-span-2 mt-12 lg:mt-0 font-medium text-sm text-stone-400"
-                    >
-                        <div>
-                            <h3 class="text-base text-white">Information</h3>
-                            <ul role="list" class="space-y-2 mt-4">
-                                <li>
-                                    <a href="/terms" class="hover:text-white">
-                                        Terms of Service
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/privacy" class="hover:text-white">
-                                        Privacy Policy
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="flex md:flex-row flex-col md:justify-between md:items-center pt-12"
-                    x-data="{ year: new Date().getFullYear() }"
-                >
-                    <span class="font-medium text-sm text-stone-400">
-                        Copyright © <span x-text="year">2024</span>
-                        <a
-                            aria-label="Team Clickette"
-                            href="https://team.clickette.org"
-                            class="mx-2 text-blue-400 hover:text-stone-400"
-                            >Team Clickette</a
-                        >
-                    </span>
-                </div>
-            </div>
-        </footer>
+		<footer>
+			<div
+				class="mx-auto px-8 md:px-12 lg:px-32 py-12 max-w-full"
+				style="
+					background: rgb(255, 98, 0);
+					background: linear-gradient(
+						0deg,
+						rgba(255, 98, 0, 0.132) 0%,
+						rgba(0, 0, 0, 1) 100%
+					);
+				"
+			>
+				<div class="xl:gap-8 xl:grid xl:grid-cols-3">
+					<div>
+						<img
+							src="/assets-homepage/img/wordmark-white.svg"
+							style="height: 23px"
+						/>
+						<p class="mt-2 lg:w-4/5 font-medium text-sm text-stone-400">
+							The best file management solution.
+						</p>
+					</div>
+					<div
+						class="gap-8 grid grid-cols-2 lg:grid-cols-3 xl:col-span-2 mt-12 lg:mt-0 font-medium text-sm text-stone-400"
+					>
+						<div>
+							<h3 class="text-base text-white">Information</h3>
+							<ul role="list" class="space-y-2 mt-4">
+								<li>
+									<a href="/terms" class="hover:text-white">
+										Terms of Service
+									</a>
+								</li>
+								<li>
+									<a href="/privacy" class="hover:text-white">
+										Privacy Policy
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div
+					class="flex md:flex-row flex-col md:justify-between md:items-center pt-12"
+					x-data="{ year: new Date().getFullYear() }"
+				>
+					<span class="font-medium text-sm text-stone-400">
+						Copyright © <span x-text="year">2024</span>
+						<a
+							aria-label="Team Clickette"
+							href="https://team.clickette.org"
+							class="mx-2 text-blue-400 hover:text-stone-400"
+							>Team Clickette</a
+						>
+					</span>
+				</div>
+			</div>
+		</footer>
 
-        <script defer src="/assets-homepage/js/alpine.js"></script>
-    </body>
+		<script defer src="/assets-homepage/js/alpine.js"></script>
+	</body>
 </html>
